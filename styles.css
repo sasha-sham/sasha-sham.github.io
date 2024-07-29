@@ -21,6 +21,14 @@ section {
     margin-bottom: 1em;
 }
 
+#intro {
+    text-align: center;
+}
+
+#hl {
+   color: #FFBF00;
+}
+
 footer {
     background-color: #333;
     color: #fff;
