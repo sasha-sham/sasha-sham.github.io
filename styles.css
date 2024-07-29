@@ -11,6 +11,7 @@ header {
     color: #fff;
     padding: 1em;
     text-align: center;
+    width: 100%;
 }
 
 main {
@@ -26,12 +27,14 @@ section {
 }
 
 #about-highlight {
-    padding: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
     text-align: center;
 }
 
 #hl {
    color: #FFBF00;
+   font-weight: bold;
 }
 
 .responsive {
@@ -42,6 +45,17 @@ section {
 
 ul {
     list-style-type: '- ';
+}
+
+.feedback {
+  width:100%;
+  overflow:auto;
+}
+.feedback div {
+  width:40%;
+  float:left;
+  padding: 0.5em;
+  border-color: black;
 }
 
 footer {
