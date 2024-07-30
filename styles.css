@@ -37,6 +37,11 @@ section {
    font-weight: bold;
 }
 
+#icon {
+   width: 80px;
+   height: 80px;
+}
+
 .responsive {
   width: 100%;
   max-width: 600px;
