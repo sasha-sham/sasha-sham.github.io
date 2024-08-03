@@ -1,12 +1,12 @@
 var dictionary = {
     "_": { // when language is not supported
-        "hello_world": "Александра Дубинкина"
+        "my_name": "Александра Дубинкина"
     },
     "en": {
-        "hello_world": "Aliaksandra Dubinkina"
+        "my_name": "Aliaksandra Dubinkina"
     },
     "ru": {
-        "hello_world": "Александра Дубинкина"
+        "my_name": "Александра Дубинкина"
     }
 }
 
