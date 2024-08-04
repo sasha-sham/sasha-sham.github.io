@@ -42,7 +42,7 @@ var dictionary = {
         
         "text_welcome": "Welcome to my site!",
         "text_about_me": "My name is Alexandra Dubinkina, I am an art therapist.",
-        "text_about": "I live in Vitebsk, I have my own art therapy studio. I am interested in creativity and culture different countries, publications in the field of psychology, pedagogy, linguistics.",
+        "text_about": "I live in Vitebsk, I have my own art therapy studio. I am interested in creativity and culture of different countries, publications in the field of psychology, pedagogy, linguistics.",
         
         "type_confidential": "Confidentiality",
         "text_confidential": "Everything you said during the sessions is a secret",
