@@ -60,7 +60,7 @@ var dictionary = {
         "text_recomendation_1": "you have a specific problem that you want to solve, but you don’t understand how to do it yourself;",
         "text_recomendation_2": "the desire to understand yourself more deeply (lifestyle, values, desires, goals, etc.);",
         "text_recomendation_3": "the problematic situation is repeated systematically (connection with your personality, temperament, behavior patterns, traumas, scars, etc.);",
-        "text_recomendation_4": "thought about developing your creative potential and spending creative time, etc.",
+        "text_recomendation_4": "thought about developing your creative potential and spend time creatively, etc.",
 
         "type_kids": "Child's personality",
         "text_kids": "Minimizing behavioral and communication difficulties, increasing adaptability in a changing world, focusing on feelings, confirming individuality",
