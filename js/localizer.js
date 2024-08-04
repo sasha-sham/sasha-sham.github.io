@@ -38,6 +38,8 @@ var dictionary = {
         "text_emotion": "Убережёте себя от раздражителей и постоянной смены настроения",
         "type_self": "Самооценка",
         "text_self": "Поймёте, как заботиться о себе, быть уверенным, добиться цели",
+        "type_creativity": "Креативность",
+        "text_creativity": "Разовьёте навыки творческого подхода в решении жизненных ситуаций, приобщитесь к эстетике и много другое",
 
         "type_feedback": "Отзывы"
     },
@@ -80,6 +82,8 @@ var dictionary = {
         "text_emotion": "Protect yourself from irritants and constant mood changes",
         "type_self": "Self-appraisal",
         "text_self": "You will understand how to take care of yourself, be confident, and achieve your goals",
+        "type_creativity": "Creativity",
+        "text_creativity": "You will develop the skills of a creative approach to solving life situations, become familiar with aesthetics, and much more",
 
         "type_feedback": "Feebback"
     }
