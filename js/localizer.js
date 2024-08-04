@@ -13,7 +13,18 @@ var dictionary = {
         "type_comfort": "Ваш комфорт",
         "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник",
         "type_quality": "Упор на качество",
-        "text_quality": "Терапия продолжается до решения проблемы или когда Вы сами решите закончить"
+        "text_quality": "Терапия продолжается до решения проблемы или когда Вы сами решите закончить",
+
+        "type_format": "Формат работы:",
+        "text_format_1": "провожу индивидуальные и групповые психологические консультации посредством арт-терапии;",
+        "text_format_2": "психологические арт-игры;",
+        "text_format_3": "арт-встречи (девичники, свидания, дни рождения) на русском и английском языках (для иностранной аудитории);",
+        
+        "type_recomendation": "Рекомендации для посещения моей арт-студии:",
+        "text_recomendation_1": "у Вас есть конкретная проблема, которую Вы хотите решить, но не понимаете, как это сделать самостоятельно;",
+        "text_recomendation_2": "преобладает желание глубже разобраться в себе (стиль жизни, ценности, желания, цели и др.);",
+        "text_recomendation_3": "проблемная ситуация повторяется систематически (связь с Вашей личностью, темпераментом, моделями поведения, травмами и др.);",
+        "text_recomendation_4": "задумались о развитии Вашего творческого потенциала и креативного времени препровождения и др."
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
@@ -29,7 +40,18 @@ var dictionary = {
         "type_comfort": "Your comfort",
         "text_comfort": "Therapy takes place at a time convenient for you using various methods and techniques",
         "type_quality": "Focus on quality",
-        "text_quality": "Therapy continues until the problem is resolved or when you decide to stop"
+        "text_quality": "Therapy continues until the problem is resolved or when you decide to stop",
+
+        "type_format": "Work format:",
+        "text_format_1": "individual and group psychological consultations through art therapy;",
+        "text_format_2": "psychological art games;",
+        "text_format_3": "art meetings (hen parties, dates, birthdays) in Russian and English (for foreign audiences);"
+
+        "type_recomendation": "Recommendations for visiting my art studio:",
+        "text_recomendation_1": "you have a specific problem that you want to solve, but you don’t understand how to do it yourself;",
+        "text_recomendation_2": "the desire to understand oneself more deeply (lifestyle, values, desires, goals, etc.) prevails;",
+        "text_recomendation_3": "the problematic situation is repeated systematically (connection with your personality, temperament, behavior patterns, injuries, etc.);",
+        "text_recomendation_4": "thought about developing your creative potential and spending creative time, etc."
     }
 
 }
