@@ -1,15 +1,18 @@
 var dictionary = {
     "_": { // when language is not supported
         "my_name": "Александра Дубинкина",
-        "my_role": "Арт-терапевт"
+        "my_role": "Арт-терапевт",
+        "type_confidential": "Конфиденциальность"
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
-        "my_role": "Art therapist"
+        "my_role": "Art therapist",
+        "type_confidential": "Confidentiality"
     },
     "ru": {
         "my_name": "Александра Дубинкина",
-        "my_role": "Арт-терапевт"
+        "my_role": "Арт-терапевт",
+        "type_confidential": "Конфиденциальность"
     }
 }
 
