@@ -2,6 +2,7 @@ var dictionary = {
     "_": { // when language is not supported
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
+        "text_welcome": "Добро пожаловать на мой сайт!",
         
         "type_confidential": "Конфиденциальность",
         "text_confidential": "Всё сказанное Вами на сеансах является тайной",
@@ -11,6 +12,7 @@ var dictionary = {
     "en": {
         "my_name": "Aliaksandra Dubinkina",
         "my_role": "Art therapist",
+        "text_welcome": "Welcome to my site!",
         
         "type_confidential": "Confidentiality",
         "text_confidential": "Everything you said during the sessions is a secret",
@@ -20,6 +22,7 @@ var dictionary = {
     "ru": {
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
+        "text_welcome": "Добро пожаловать на мой сайт!",
         
         "type_confidential": "Конфиденциальность",
         "text_confidential": "Всё сказанное Вами на сеансах является тайной",
