@@ -5,7 +5,7 @@ var dictionary = {
         "my_location": "(арт-терапевтическая студия Sasha Sham)",
         
         "text_welcome": "Добро пожаловать на мой сайт!",
-        "text_who_is": "Меня зовут Александра Дубинкина, я арт-терапевт.",
+        "text_about_me": "Меня зовут Александра Дубинкина, я арт-терапевт.",
         "text_about": "Живу в Витебске, имею свою студию по арт-терапии. Увлекаюсь творчеством, культурой разных стран, публикациями в сфере психологии, педагогики, языкознания.",
         
         "type_confidential": "Конфиденциальность",
@@ -21,7 +21,7 @@ var dictionary = {
         "my_location": "(art therapy studio Sasha Sham)",
         
         "text_welcome": "Welcome to my site!",
-        "text_who_is": "My name is Alexandra Dubinkina, I am an art therapist.",
+        "text_about_me": "My name is Alexandra Dubinkina, I am an art therapist.",
         "text_about": "I live in Vitebsk, I have my own art therapy studio. I am interested in creativity and culture different countries, publications in the field of psychology, pedagogy, linguistics.",
         
         "type_confidential": "Confidentiality",
