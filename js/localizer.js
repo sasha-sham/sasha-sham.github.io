@@ -29,7 +29,7 @@ var dictionary = {
         "type_kids": "Личность ребенка",
         "text_kids": "Минимизация трудностей поведения и коммуникации, повышение адаптивности в меняющемся мире, концентрация на чувствах, подтверждение индивидуальности",
         "type_relationship": "Отношения",
-        "text_relationship": "Научитесь ценить себя с партнёром, друзьями, говорить "нет" без угрызения совести",
+        "text_relationship": "Научитесь ценить себя с партнёром, друзьями, говорить 'нет' без угрызения совести",
         "type_stress": "Стресс",
         "text_stress": "Выявим причины беспокойств, волнений, переживаний, тревожности и способы с этим справиться",
 
@@ -65,7 +65,7 @@ var dictionary = {
         "type_kids": "Child's personality",
         "text_kids": "Minimizing behavioral and communication difficulties, increasing adaptability in a changing world, focusing on feelings, confirming individuality",
         "type_relationship": "Relationship",
-        "text_relationship": "Learn to value yourself with your partner, friends, and say “no” without remorse",
+        "text_relationship": "Learn to value yourself with your partner, friends, and say 'no' without remorse",
         "type_stress": "Stress",
         "text_stress": "We will identify the causes of worries, worries, worries, anxiety and ways to cope with them",
 
