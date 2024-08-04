@@ -2,20 +2,29 @@ var dictionary = {
     "_": { // when language is not supported
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
+        
         "type_confidential": "Конфиденциальность",
-        "text_confidential": "Всё сказанное Вами на сеансах является тайной"
+        "text_confidential": "Всё сказанное Вами на сеансах является тайной",
+        "type_comfort": "Ваш комфорт",
+        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник"
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
         "my_role": "Art therapist",
+        
         "type_confidential": "Confidentiality",
-        "text_confidential": "Everything you said during the sessions is a secret"
+        "text_confidential": "Everything you said during the sessions is a secret",
+        "type_comfort": "Your comfort",
+        "text_comfort": "Therapy takes place at a time convenient for you using various methods and techniques"
     },
     "ru": {
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
+        
         "type_confidential": "Конфиденциальность",
-        "text_confidential": "Всё сказанное Вами на сеансах является тайной"
+        "text_confidential": "Всё сказанное Вами на сеансах является тайной",
+        "type_comfort": "Ваш комфорт",
+        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник"
     }
 }
 
