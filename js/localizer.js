@@ -24,7 +24,16 @@ var dictionary = {
         "text_recomendation_1": "у Вас есть конкретная проблема, которую Вы хотите решить, но не понимаете, как это сделать самостоятельно;",
         "text_recomendation_2": "преобладает желание глубже разобраться в себе (стиль жизни, ценности, желания, цели и др.);",
         "text_recomendation_3": "проблемная ситуация повторяется систематически (связь с Вашей личностью, темпераментом, моделями поведения, травмами и др.);",
-        "text_recomendation_4": "задумались о развитии Вашего творческого потенциала и креативного времени препровождения и др."
+        "text_recomendation_4": "задумались о развитии Вашего творческого потенциала и креативного времени препровождения и др.",
+
+        "type_kids": "Личность ребенка",
+        "text_kids": "Минимизация трудностей поведения и коммуникации, повышение адаптивности в меняющемся мире, концентрация на чувствах, подтверждение индивидуальности",
+        "type_relationship": "Отношения",
+        "text_relationship": "Научитесь ценить себя с партнёром, друзьями, говорить "нет" без угрызения совести",
+        "type_stress": "Стресс",
+        "text_stress": "Выявим причины беспокойств, волнений, переживаний, тревожности и способы с этим справиться",
+
+        "type_feedback": "Отзывы"
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
@@ -51,7 +60,16 @@ var dictionary = {
         "text_recomendation_1": "you have a specific problem that you want to solve, but you don’t understand how to do it yourself;",
         "text_recomendation_2": "the desire to understand oneself more deeply (lifestyle, values, desires, goals, etc.) prevails;",
         "text_recomendation_3": "the problematic situation is repeated systematically (connection with your personality, temperament, behavior patterns, injuries, etc.);",
-        "text_recomendation_4": "thought about developing your creative potential and spending creative time, etc."
+        "text_recomendation_4": "thought about developing your creative potential and spending creative time, etc.",
+
+        "type_kids": "Child's personality",
+        "text_kids": "Minimizing behavioral and communication difficulties, increasing adaptability in a changing world, focusing on feelings, confirming individuality",
+        "type_relationship": "Relationship",
+        "text_relationship": "Learn to value yourself with your partner, friends, and say “no” without remorse",
+        "type_stress": "Stress",
+        "text_stress": "We will identify the causes of worries, worries, worries, anxiety and ways to cope with them",
+
+        "type_feedback": "Feebback"
     }
 
 }
