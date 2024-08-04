@@ -2,6 +2,8 @@ var dictionary = {
     "_": { // when language is not supported
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
+        "my_location": "Арт-терапевт",
+        
         "text_welcome": "Добро пожаловать на мой сайт!",
         
         "type_confidential": "Конфиденциальность",
@@ -14,6 +16,8 @@ var dictionary = {
     "en": {
         "my_name": "Aliaksandra Dubinkina",
         "my_role": "Art therapist",
+        "my_location": "Арт-терапевт",
+        
         "text_welcome": "Welcome to my site!",
         
         "type_confidential": "Confidentiality",
@@ -26,6 +30,8 @@ var dictionary = {
     "ru": {
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
+        "my_location": "Арт-терапевт",
+        
         "text_welcome": "Добро пожаловать на мой сайт!",
         
         "type_confidential": "Конфиденциальность",
