@@ -7,7 +7,9 @@ var dictionary = {
         "type_confidential": "Конфиденциальность",
         "text_confidential": "Всё сказанное Вами на сеансах является тайной",
         "type_comfort": "Ваш комфорт",
-        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник"
+        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник",
+        "type_quality": "Упор на качество",
+        "text_quality": "Терапия продолжается до решения проблемы или когда Вы сами решите закончить"
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
@@ -17,7 +19,9 @@ var dictionary = {
         "type_confidential": "Confidentiality",
         "text_confidential": "Everything you said during the sessions is a secret",
         "type_comfort": "Your comfort",
-        "text_comfort": "Therapy takes place at a time convenient for you using various methods and techniques"
+        "text_comfort": "Therapy takes place at a time convenient for you using various methods and techniques",
+        "type_quality": "Focus on quality",
+        "text_quality": "Therapy continues until the problem is resolved or when you decide to stop"
     },
     "ru": {
         "my_name": "Александра Дубинкина",
@@ -27,7 +31,9 @@ var dictionary = {
         "type_confidential": "Конфиденциальность",
         "text_confidential": "Всё сказанное Вами на сеансах является тайной",
         "type_comfort": "Ваш комфорт",
-        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник"
+        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник",
+        "type_quality": "Упор на качество",
+        "text_quality": "Терапия продолжается до решения проблемы или когда Вы сами решите закончить"
     }
 }
 
