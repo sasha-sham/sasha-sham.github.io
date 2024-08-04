@@ -34,6 +34,10 @@ var dictionary = {
         "text_stress": "Выявим причины беспокойств, волнений, переживаний, тревожности и способы с этим справиться",
         "type_mother": "Материнство",
         "text_mother": "Обретёте покой, любовь, счастье в статусе мамы",
+        "type_emotion": "Эмоциональная нестабильность",
+        "text_emotion": "Убережёте себя от раздражителей и постоянной смены настроения",
+        "type_self": "Самооценка",
+        "text_self": "Поймёте, как заботиться о себе, быть уверенным, добиться цели",
 
         "type_feedback": "Отзывы"
     },
@@ -72,6 +76,10 @@ var dictionary = {
         "text_stress": "We will identify the causes of worries, anxiety and ways to cope with them",
         "type_mother": "Motherhood",
         "text_mother": "You will find peace, love, happiness as a mother",
+        "type_emotion": "Emotional instability",
+        "text_emotion": "Protect yourself from irritants and constant mood changes",
+        "type_self": "Self-appraisal",
+        "text_self": "You will understand how to take care of yourself, be confident, and achieve your goals",
 
         "type_feedback": "Feebback"
     }
