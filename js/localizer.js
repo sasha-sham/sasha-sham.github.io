@@ -2,17 +2,20 @@ var dictionary = {
     "_": { // when language is not supported
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
-        "type_confidential": "Конфиденциальность"
+        "type_confidential": "Конфиденциальность",
+        "text_confidential": "Всё сказанное Вами на сеансах является тайной"
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
         "my_role": "Art therapist",
-        "type_confidential": "Confidentiality"
+        "type_confidential": "Confidentiality",
+        "text_confidential": "Everything you said during the sessions is a secret"
     },
     "ru": {
         "my_name": "Александра Дубинкина",
         "my_role": "Арт-терапевт",
-        "type_confidential": "Конфиденциальность"
+        "type_confidential": "Конфиденциальность",
+        "text_confidential": "Всё сказанное Вами на сеансах является тайной"
     }
 }
 
