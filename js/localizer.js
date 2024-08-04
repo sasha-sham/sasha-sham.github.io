@@ -1,18 +1,4 @@
 var dictionary = {
-    "_": { // when language is not supported
-        "my_name": "Александра Дубинкина",
-        "my_role": "Арт-терапевт",
-        "my_location": "(арт-терапевтическая студия Sasha Sham)",
-        
-        "text_welcome": "Добро пожаловать на мой сайт!",
-        
-        "type_confidential": "Конфиденциальность",
-        "text_confidential": "Всё сказанное Вами на сеансах является тайной",
-        "type_comfort": "Ваш комфорт",
-        "text_comfort": "Терапия проходит в удобное для Вас время с использованием различных методик и техник",
-        "type_quality": "Упор на качество",
-        "text_quality": "Терапия продолжается до решения проблемы или когда Вы сами решите закончить"
-    },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
         "my_role": "Art therapist",
@@ -67,7 +53,7 @@ class LocalizedTextElement extends HTMLElement {
     }
     
     translate(key, lang) {
-        return (lang in dictionary)?dictionary[lang][key]:dictionary['_'][key];
+        return (lang in dictionary)?dictionary[lang][key]:dictionary['ru'][key];
     }
 }
   
