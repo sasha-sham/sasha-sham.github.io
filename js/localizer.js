@@ -32,6 +32,8 @@ var dictionary = {
         "text_relationship": "Научитесь ценить себя с партнёром, друзьями, говорить 'нет' без угрызения совести",
         "type_stress": "Стресс",
         "text_stress": "Выявим причины беспокойств, волнений, переживаний, тревожности и способы с этим справиться",
+        "type_mother": "Материнство",
+        "text_mother": "Обретёте покой, любовь, счастье в статусе мамы",
 
         "type_feedback": "Отзывы"
     },
@@ -67,7 +69,9 @@ var dictionary = {
         "type_relationship": "Relationship",
         "text_relationship": "Learn to value yourself with your partner, friends, and say 'no' without remorse",
         "type_stress": "Stress",
-        "text_stress": "We will identify the causes of worries, worries, worries, anxiety and ways to cope with them",
+        "text_stress": "We will identify the causes of worries, anxiety and ways to cope with them",
+        "type_mother": "Motherhood",
+        "text_mother": "You will find peace, love, happiness as a mother",
 
         "type_feedback": "Feebback"
     }
