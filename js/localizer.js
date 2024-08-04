@@ -45,7 +45,7 @@ var dictionary = {
         "type_format": "Work format:",
         "text_format_1": "individual and group psychological consultations through art therapy;",
         "text_format_2": "psychological art games;",
-        "text_format_3": "art meetings (hen parties, dates, birthdays) in Russian and English (for foreign audiences);"
+        "text_format_3": "art meetings (hen parties, dates, birthdays) in Russian and English (for foreign audiences);",
 
         "type_recomendation": "Recommendations for visiting my art studio:",
         "text_recomendation_1": "you have a specific problem that you want to solve, but you don’t understand how to do it yourself;",
