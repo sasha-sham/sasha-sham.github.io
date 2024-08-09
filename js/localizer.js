@@ -1,10 +1,11 @@
 var dictionary = {
     "ru": {
         "my_name": "Александра Дубинкина",
+        "my_role": "я арт-терапевт",
         "my_location": "Арт-терапевтическая студия Sasha Sham это:",
         
         "text_welcome": "Добро пожаловать на мой сайт!",
-        "text_about_me": "Меня зовут Александра Дубинкина, я арт-терапевт.",
+        "text_about_me": "Меня зовут Александра Дубинкина.",
         "text_about": "Живу в Витебске, имею свою студию по арт-терапии. Увлекаюсь творчеством, культурой разных стран, публикациями в сфере психологии, педагогики, языкознания.",
         
         "type_confidential": "Конфиденциальность",
@@ -44,10 +45,11 @@ var dictionary = {
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
+        "my_role": "I'm an art therapist",
         "my_location": "Art therapy studio Sasha Sham is:",
         
         "text_welcome": "Welcome to my site!",
-        "text_about_me": "My name is Alexandra Dubinkina, I am an art therapist.",
+        "text_about_me": "My name is Alexandra Dubinkina.",
         "text_about": "I live in Vitebsk, I have my own art therapy studio. I am interested in creativity and culture of different countries, publications in the field of psychology, pedagogy, linguistics.",
         
         "type_confidential": "Confidentiality",
