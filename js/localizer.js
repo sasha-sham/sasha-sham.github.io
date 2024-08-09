@@ -1,7 +1,6 @@
 var dictionary = {
     "ru": {
         "my_name": "Александра Дубинкина",
-        "my_role": "Арт-терапевт",
         "my_location": "(арт-терапевтическая студия Sasha Sham)",
         
         "text_welcome": "Добро пожаловать на мой сайт!",
@@ -45,7 +44,6 @@ var dictionary = {
     },
     "en": {
         "my_name": "Aliaksandra Dubinkina",
-        "my_role": "Art therapist",
         "my_location": "(art therapy studio Sasha Sham)",
         
         "text_welcome": "Welcome to my site!",
