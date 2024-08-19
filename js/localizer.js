@@ -114,7 +114,8 @@ class LocalizedTextElement extends HTMLElement {
     }
     
     translate(key, lang) {
-        return (lang in dictionary)?dictionary[lang][key]:dictionary['ru'][key];
+        //return (lang in dictionary)?dictionary[lang][key]:dictionary['ru'][key];
+        return dictionary['ru'][key];
     }
 }
   
