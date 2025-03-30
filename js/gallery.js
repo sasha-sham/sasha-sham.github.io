@@ -3,27 +3,20 @@ try {
     const gallery = document.getElementById('gallery');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    const totalImages = 142;
     let currentImageIndex = 0;
     const images = [];
 
     // Validate and get image path
     function getImagePath(index) {
-        if (!/^\d+$/.test(String(index)) || index < 1 || index > totalImages) {
+        if (!/^\d+$/.test(String(index)) || index < 1 || index > GalleryData.totalImages) {
             console.error('Invalid image index:', index);
             return null;
         }
         return `gallery/image-${String(index).padStart(3, '0')}.jpg`;
     }
 
-    // Array of sold items (you can add more indices as needed)
-    const soldItems = [1, 4, 5, 10, 12, 15, 16, 19, 23, 24, 25, 26, 27, 30, 35, 36, 37, 38, 39, 40, 41, 47, 48, 49, 52, 66, 75, 77, 78, 83, 87, 102, 109, 125, 127, 138, 139, 140, 142];
-
-    // Array of items with AR content
-    const arItems = [3, 4, 7, 8, 12, 20, 23, 27, 30, 32, 33, 34, 42, 43, 44, 45, 48, 51, 52, 56, 58, 61, 68, 75, 81, 102, 105, 106, 109, 110, 115, 116, 119, 120, 123, 126, 128, 130, 131, 136, 137, 138];
-
     // Create gallery images
-    for (let i = 1; i <= totalImages; i++) {
+    for (let i = 1; i <= GalleryData.totalImages; i++) {
         const container = document.createElement('div');
         container.className = 'gallery-item-container';
 
@@ -42,7 +35,7 @@ try {
         };
 
         // Add AR label to specific items
-        if (arItems.includes(i)) {
+        if (GalleryData.hasArContent(i)) {
             const arLabel = document.createElement('div');
             arLabel.className = 'ar-label';
             arLabel.textContent = 'AR';
@@ -50,7 +43,7 @@ try {
         }
 
         // Check if the item is sold
-        if (soldItems.includes(i)) {
+        if (GalleryData.isItemSold(i)) {
             const soldOverlay = document.createElement('div');
             soldOverlay.className = 'sold-overlay';
             soldOverlay.textContent = 'Продано';
