@@ -17,7 +17,10 @@ try {
     }
 
     // Array of sold items (you can add more indices as needed)
-    const soldItems = [1, 4, 5, 10, 12, 15, 16, 19, 23, 24, 25, 26, 27, 30, 35, 36, 37, 38, 39, 40, 41, 47, 48, 49, 52, 66, 75, 77, 78, 83, 87, 102, 109, 125, 127, 137, 138, 140, 142];
+    const soldItems = [1, 4, 5, 10, 12, 15, 16, 19, 23, 24, 25, 26, 27, 30, 35, 36, 37, 38, 39, 40, 41, 47, 48, 49, 52, 66, 75, 77, 78, 83, 87, 102, 109, 125, 127, 138, 139, 140, 142];
+
+    // Array of items with AR content
+    const arItems = [3, 4, 7, 8, 12, 20, 23, 27, 30, 32, 33, 34, 42, 43, 44, 45, 48, 51, 52, 56, 58, 61, 68, 75, 81, 102, 105, 106, 109, 110, 115, 116, 119, 120, 123, 126, 128, 130, 131, 136, 137, 138];
 
     // Create gallery images
     for (let i = 1; i <= totalImages; i++) {
@@ -37,6 +40,14 @@ try {
             this.src = 'images/placeholder.jpg';
             this.alt = 'Image not found';
         };
+
+        // Add AR label to specific items
+        if (arItems.includes(i)) {
+            const arLabel = document.createElement('div');
+            arLabel.className = 'ar-label';
+            arLabel.textContent = 'AR';
+            container.appendChild(arLabel);
+        }
 
         // Check if the item is sold
         if (soldItems.includes(i)) {
