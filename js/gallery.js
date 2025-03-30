@@ -16,8 +16,14 @@ try {
         return `gallery/image-${String(index).padStart(3, '0')}.jpg`;
     }
 
+    // Array of sold items (you can add more indices as needed)
+    const soldItems = [1, 4, 5, 10, 12, 15, 16, 19, 23, 24, 25, 26, 27, 30, 35, 36, 37, 38, 39, 40, 41, 47, 48, 49, 52, 66, 75, 77, 78, 83, 87, 102, 109, 125, 127, 137, 138, 140, 142];
+
     // Create gallery images
     for (let i = 1; i <= totalImages; i++) {
+        const container = document.createElement('div');
+        container.className = 'gallery-item-container';
+
         const img = document.createElement('img');
         const imagePath = getImagePath(i);
         if (!imagePath) continue;
@@ -32,8 +38,17 @@ try {
             this.alt = 'Image not found';
         };
 
+        // Check if the item is sold
+        if (soldItems.includes(i)) {
+            const soldOverlay = document.createElement('div');
+            soldOverlay.className = 'sold-overlay';
+            soldOverlay.textContent = 'Продано';
+            container.appendChild(soldOverlay);
+        }
+
         img.addEventListener('click', openLightbox);
-        gallery.appendChild(img);
+        container.appendChild(img);
+        gallery.appendChild(container);
         images.push(img);
     }
 
