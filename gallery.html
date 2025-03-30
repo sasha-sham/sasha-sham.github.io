@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://mc.yandex.ru; script-src 'self' https://mc.yandex.ru; img-src 'self' https://mc.yandex.ru data:; style-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <title>Галерея - Sasha Sham</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Yandex.Metrika counter -->
+    <script src="js/analytics.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/98265789" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <header>
+        <!-- Empty header -->
+    </header>
+    <main>
+        <h1>Мои работы</h1>
+        <div class="back-link-container">
+            <a href="index.html" class="button-link">← Вернуться на главную</a>
+        </div>
+        <div id="gallery" class="gallery">
+        </div>
+        
+        <div id="lightbox" class="lightbox">
+            <button class="close-lightbox" aria-label="Close gallery" type="button">&times;</button>
+            <button class="nav-button prev-button" aria-label="Previous image" type="button">&lt;</button>
+            <button class="nav-button next-button" aria-label="Next image" type="button">&gt;</button>
+            <img id="lightbox-img" src="data:," alt="Gallery image" crossorigin="anonymous" onerror="this.src='images/placeholder.jpg'; this.alt='Image failed to load';">
+        </div>
+        <div class="back-link-container">
+            <a href="index.html" class="button-link">← Вернуться на главную</a>
+        </div>
+
+        <script src="js/gallery.js"></script>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 ИП Дубинкина Александра Олеговна</p>
+    </footer>
+</body>
+</html>
