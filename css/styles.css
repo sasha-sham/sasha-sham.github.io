@@ -231,6 +231,29 @@ footer {
         transform: none;
         box-shadow: none;
     }
+
+    .feedback-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .feedback-card {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .feedback-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .feedback-artwork {
+        width: 100%;
+        height: 200px;
+    }
 }
 
 /* Feedback page styles */
@@ -250,16 +273,27 @@ footer {
 .feedback-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .feedback-card {
     background: #fff;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.feedback-artwork {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 .feedback-card:hover {
