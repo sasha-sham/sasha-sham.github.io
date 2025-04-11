@@ -12,10 +12,15 @@ header {
     text-align: center;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
     position: relative;
+}
+
+header .menu-toggle {
+    position: absolute;
+    right: 20px;
 }
 
 .menu-toggle {
