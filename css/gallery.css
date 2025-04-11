@@ -94,17 +94,25 @@
     padding: 10px;
 }
 
-.nav-button {
+.lightbox .nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: white;
-    font-size: 30px;
-    cursor: pointer;
     background: none;
     border: none;
-    padding: 20px;
+    font-size: 24px;
+    padding: 15px;
+    cursor: pointer;
     z-index: 1001;
+}
+
+.lightbox .prev-button {
+    left: 20px;
+}
+
+.lightbox .next-button {
+    right: 20px;
 }
 
 .prev-button { left: 20px; }

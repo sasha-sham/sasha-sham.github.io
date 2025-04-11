@@ -50,16 +50,20 @@ try {
             container.appendChild(soldOverlay);
         }
 
-        img.addEventListener('click', openLightbox);
+        // Add image to container
         container.appendChild(img);
+        // Add container to gallery
         gallery.appendChild(container);
+        // Store image reference
         images.push(img);
+
+        img.addEventListener('click', openLightbox);
     }
 
     // Lightbox functions
     function openLightbox(e) {
         const index = parseInt(e.target.dataset.index);
-        if (isNaN(index) || index < 0 || index >= totalImages) {
+        if (isNaN(index) || index < 0 || index >= GalleryData.totalImages) {
             console.error('Invalid image index:', index);
             return;
         }
@@ -82,12 +86,12 @@ try {
     }
 
     function nextImage() {
-        currentImageIndex = (currentImageIndex + 1) % totalImages;
+        currentImageIndex = (currentImageIndex + 1) % GalleryData.totalImages;
         updateLightboxImage();
     }
 
     function prevImage() {
-        currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+        currentImageIndex = (currentImageIndex - 1 + GalleryData.totalImages) % GalleryData.totalImages;
         updateLightboxImage();
     }
 
