@@ -175,10 +175,6 @@ footer {
     }
 
     .menu-toggle {
-        display: none;
-    }
-
-    .menu-toggle {
         display: block;
         pointer-events: auto;
         position: absolute;
