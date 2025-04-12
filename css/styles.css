@@ -272,9 +272,12 @@ footer {
     }
 
     .nav-button {
-        display: block;
+        display: flex;
+        align-items: center;
         cursor: pointer;
         width: 100%;
+        height: auto;
+        min-height: 44px;
         margin: 0;
         padding: 14px 20px;
         font-size: 17px;
