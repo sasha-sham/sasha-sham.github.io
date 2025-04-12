@@ -1,0 +1,76 @@
+/* Feedback styles */
+.feedback-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feedback-card {
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.feedback-card:hover {
+    transform: scale(1.05);
+}
+
+.feedback-artwork {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.feedback-section {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feedback-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Contacts Styles size 480px */
+
+@media (max-width: 480px) {
+
+}
+
+/* Contacts Styles size 768px */
+
+@media (max-width: 768px) {
+    .feedback-section {
+        padding: 0.5rem;
+    }
+
+    .feedback-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .feedback-container {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 0.25rem;
+    }
+
+    .feedback-card {
+        aspect-ratio: 1;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+}

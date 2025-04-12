@@ -178,36 +178,21 @@ footer {
         display: none;
     }
 
-    .hamburger,
-    .hamburger::before,
-    .hamburger::after {
-        display: none;
-    }
-
-    @media (max-width: 768px) {
-        .menu-toggle {
-            display: block;
-            pointer-events: auto;
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 8px;
-            margin: 0;
-            border: none;
-            background: transparent !important;
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
-            outline: none;
-            z-index: 1001;
-        }
-
-        .hamburger,
-        .hamburger::before,
-        .hamburger::after {
-            display: block;
-            pointer-events: auto;
-        }
+    .menu-toggle {
+        display: block;
+        pointer-events: auto;
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        margin: 0;
+        border: none;
+        background: transparent !important;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+        z-index: 1001;
     }
 
     .menu-toggle:active,
@@ -217,52 +202,51 @@ footer {
         outline: none;
     }
 
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;
-            position: relative;
-            width: 18px;
-            height: 12px;
-        }
-
-        .hamburger,
-        .hamburger::before,
-        .hamburger::after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 0;
-            width: 18px;
-            height: 2px;
-            background-color: #000;
-            border-radius: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .hamburger {
-            top: 5px;
-        }
-
-        .hamburger::before {
-            top: -5px;
-        }
-
-        .hamburger::after {
-            top: 5px;
-        }
-
-        .menu-toggle.active .hamburger {
-            background-color: transparent;
-        }
-
-        .menu-toggle.active .hamburger::before {
-            transform: translateY(5px) rotate(45deg);
-        }
-
-        .menu-toggle.active .hamburger::after {
-            transform: translateY(-5px) rotate(-45deg);
-        }
+    .hamburger {
+        display: block;
+        position: relative;
+        width: 18px;
+        height: 12px;
+        top: 5px;
     }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        display: none;
+        display: block;
+        pointer-events: auto;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background-color: #000;
+        border-radius: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger::before {
+        top: -5px;
+    }
+
+    .hamburger::after {
+        top: 5px;
+    }
+
+    .menu-toggle.active .hamburger {
+        background-color: transparent;
+    }
+
+    .menu-toggle.active .hamburger::before {
+        transform: translateY(5px) rotate(45deg);
+    }
+
+    .menu-toggle.active .hamburger::after {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
 
     .nav-buttons {
         position: fixed;
@@ -342,73 +326,8 @@ footer {
         background-color: #D1D1D6;
     }
 
-    .feedback-section {
-        padding: 0.5rem;
-    }
-
-    .feedback-section h2 {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-    }
-
-    .feedback-container {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-        padding: 0.25rem;
-    }
-
-    .feedback-card {
-        aspect-ratio: 1;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-    }
 }
 
-/* Feedback styles */
-.feedback-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.feedback-card {
-    background: #fff;
-    padding: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    position: relative;
-    aspect-ratio: 1;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.feedback-card:hover {
-    transform: scale(1.05);
-}
-
-.feedback-artwork {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-}
-
-.feedback-section {
-    padding: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.feedback-section h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-}
 
 @media (max-width: 480px) {
 
