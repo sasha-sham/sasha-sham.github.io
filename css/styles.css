@@ -213,8 +213,6 @@ footer {
     .hamburger,
     .hamburger::before,
     .hamburger::after {
-        display: none;
-        display: block;
         pointer-events: auto;
         content: '';
         display: block;
