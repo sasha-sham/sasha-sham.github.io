@@ -263,12 +263,13 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 20px 0;
+        padding: 5px 0;
         margin: 0;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         z-index: 1000;
         pointer-events: auto;
+        gap: 5px;
     }
 
     .nav-button {
@@ -279,8 +280,8 @@ footer {
         height: auto;
         min-height: 44px;
         margin: 0;
-        padding: 14px 20px;
-        font-size: 17px;
+        padding: 5px 10px;
+        font-size: 20px;
         text-align: left;
         background-color: transparent;
         color: #000;
