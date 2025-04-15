@@ -1,0 +1,179 @@
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5em;
+    background-color: #f4f4f4;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8em;
+}
+
+.service-header h2 {
+    color: #333;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.more-info {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.more-info:hover {
+    text-decoration: underline;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 1em;
+    align-items: start;
+}
+
+.service-images {
+    display: flex;
+    gap: 0.8em;
+    flex-direction: row;
+}
+
+.service-images img {
+    width: 185px;
+    border-radius: 6px;
+    object-fit: cover;
+    height: 110px;
+    transition: transform 0.3s ease;
+}
+
+.service-images img:hover {
+    transform: scale(1.02);
+}
+
+.service-details {
+    color: #666;
+}
+
+.service-details p {
+    margin: 0 0 0.8em 0;
+    line-height: 1.4;
+    font-size: 0.9em;
+}
+
+.price-tag {
+    text-align: right;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.price-tag span {
+    background-color: #e8f5e9;
+    padding: 0.4em 0.8em;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+@media (max-width: 900px) {
+    main {
+        max-width: 100%;
+        padding: 1em;
+    }
+
+    .service-content {
+        grid-template-columns: 320px 1fr;
+    }
+
+    .service-images img {
+        width: 155px;
+    }
+}
+
+@media (max-width: 700px) {
+    .service-card {
+        padding: 1em;
+    }
+
+    .service-content {
+        grid-template-columns: 1fr;
+    }
+
+    .service-images {
+        justify-content: center;
+    }
+
+    .service-images img {
+        width: 140px;
+        height: 100px;
+    }
+
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.6em;
+    }
+
+    .service-header h2 {
+        font-size: 1.1em;
+    }
+
+    .price-tag {
+        text-align: center;
+        margin-top: 0.6em;
+    }
+
+    .service-details {
+        text-align: center;
+    }
+
+    .service-details p {
+        font-size: 0.9em;
+        margin-bottom: 0.6em;
+    }
+}
+
+@media (max-width: 400px) {
+    .service-images img {
+        width: 120px;
+        height: 90px;
+    }
+
+    .service-header h2 {
+        font-size: 1em;
+    }
+
+    .service-details p {
+        font-size: 0.85em;
+    }
+
+    .price-tag span {
+        font-size: 0.85em;
+        padding: 0.3em 0.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+
+    .service-card {
+        padding: 1.5em;
+    }
+}
