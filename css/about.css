@@ -1,0 +1,160 @@
+/* About page styles */
+.about-intro {
+    padding: 2rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+    max-width: 600px;
+}
+
+.profile-info h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info h3 {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.quote {
+    font-style: italic;
+    color: #666;
+    font-size: 1.1em;
+    margin: 1rem 0;
+}
+
+.about-content {
+    padding: 0 1rem;
+}
+
+.about-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #FF69B4;
+    padding-bottom: 0.5rem;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-section ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-section ul li::before {
+    content: "•";
+    color: #FF69B4;
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.principle-card {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.principle-card:hover {
+    transform: translateY(-5px);
+}
+
+.principle-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.principle-card h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.principle-card p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-section {
+        padding: 1.5rem;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-section {
+        padding: 1rem;
+    }
+}

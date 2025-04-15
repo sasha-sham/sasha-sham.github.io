@@ -177,3 +177,114 @@ main {
         padding: 1.5em;
     }
 }
+
+/* Image Preview Modal Styles */
+.image-preview-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.image-preview-modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.close-modal:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.image-navigation {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.prev-image, .next-image {
+    font-size: 24px;
+    color: white;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 0 20px;
+}
+
+.prev-image:hover, .next-image:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+/* Make service images appear clickable */
+.service-images img {
+    cursor: pointer;
+}
+
+/* Responsive styles for the image preview */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+    }
+    
+    .prev-image, .next-image {
+        font-size: 20px;
+        padding: 8px 12px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .prev-image, .next-image {
+        font-size: 16px;
+        padding: 6px 10px;
+        margin: 0 5px;
+    }
+    
+    .close-modal {
+        top: -35px;
+        font-size: 30px;
+    }
+}

@@ -18,12 +18,12 @@ const servicesData = [
         title: 'АРТ-ВЕЧЕРИНКА ДЛЯ ВЗРОСЛЫХ',
         images: [
             {
-                src: 'images/creativity.png',
-                alt: 'Творческие занятия'
+                src: 'images/services/adult-party-01.jpg',
+                alt: 'Арт-вечеринка для взрослых 1'
             },
             {
-                src: 'images/relationship.png',
-                alt: 'Групповая работа'
+                src: 'images/services/adult-party-02.jpg',
+                alt: 'Арт-вечеринка для взрослых 2'
             }
         ],
         description: 'Сделай свой досуг незабываемым и оригинальным! Расширяй границы и трансформируйся в компании арт-терапевта.',
@@ -33,12 +33,12 @@ const servicesData = [
         title: 'ДЕТСКАЯ АРТ-ВЕЧЕРИНКА',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/kids-party-01.jpg',
+                alt: 'Детская арт-вечеринка 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/kids-party-02.jpg',
+                alt: 'Детская арт-вечеринка 2'
             }
         ],
         description: 'Это отличная возможность развивать свои творческие навыки и провести время с другими детьми, увлечёнными искусством!',
