@@ -1,0 +1,28 @@
+# robots.txt for art-sasha.site
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /feedback.html
+Allow: /contact.html
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+Disallow: /.git/
+
+# Sitemap
+Sitemap: https://www.art-sasha.site/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Host
+Host: https://www.art-sasha.site
+
+# Clean parameters
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
+
+# Yandex specific
+User-agent: Yandex
+Clean-param: yclid&ymclid
