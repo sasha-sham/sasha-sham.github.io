@@ -3,12 +3,12 @@ const servicesData = [
         title: 'МАСТЕР-КЛАССЫ',
         images: [
             {
-                src: 'images/emotion.png',
-                alt: 'Работа с эмоциями'
+                src: 'images/services/mk-01.jpg',
+                alt: 'Мастер-класс 1'
             },
             {
-                src: 'images/self.png',
-                alt: 'Самопознание'
+                src: 'images/services/mk-02.jpg',
+                alt: 'Мастер-класс 2'
             }
         ],
         description: 'Мастер-классы действуют на постоянной основе. Вдохновляющий интерьер, тематические посиделки, позитивные эмоции!',

@@ -54,10 +54,10 @@ main {
 }
 
 .service-images img {
-    width: 185px;
+    width: 150px;
     border-radius: 6px;
     object-fit: cover;
-    height: 110px;
+    height: 150px;
     transition: transform 0.3s ease;
 }
 
@@ -101,7 +101,7 @@ main {
     }
 
     .service-images img {
-        width: 155px;
+        width: 120px;
     }
 }
 
@@ -119,8 +119,8 @@ main {
     }
 
     .service-images img {
-        width: 140px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
     }
 
     .service-header {
@@ -151,7 +151,7 @@ main {
 @media (max-width: 400px) {
     .service-images img {
         width: 120px;
-        height: 90px;
+        height: 120px;
     }
 
     .service-header h2 {
