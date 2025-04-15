@@ -48,12 +48,12 @@ const servicesData = [
         title: 'АРТ-ДЕНЬ РОЖДЕНИЯ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/bd-01.jpg',
+                alt: 'Арт-день рождения 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/bd-02.jpg',
+                alt: 'Арт-день рождения 2'
             }
         ],
         description: 'Ищите пространство для праздника? Удобный формат: только Вы и Ваши близкие. Рисуем картину, веселимся, получаем подарки.',
