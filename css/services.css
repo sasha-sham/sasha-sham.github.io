@@ -288,3 +288,105 @@ main {
         font-size: 30px;
     }
 }
+
+/* Additional Info Panel Styles */
+.additional-info {
+    background-color: #f9f9f9;
+    border-radius: 0 0 8px 8px;
+    margin-top: 10px;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.additional-info.active {
+    padding: 15px;
+    max-height: 1000px; /* Adjust based on your content */
+    border-top: 1px solid #eee;
+}
+
+.additional-info-content {
+    padding: 15px;
+}
+
+.additional-info h3 {
+    color: #444;
+    font-size: 1em;
+    margin: 10px 0 5px 0;
+}
+
+.additional-info .details {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.additional-info .includes ul {
+    list-style-type: none;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+.additional-info .includes li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.additional-info .includes li::before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+}
+
+.additional-info .schedule, 
+.additional-info .requirements {
+    margin-top: 12px;
+}
+
+.additional-info .schedule p,
+.additional-info .requirements p {
+    color: #555;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* Update More Info button styles */
+.more-info {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.more-info:hover {
+    color: #27ae60;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments for additional info */
+@media (max-width: 700px) {
+    .additional-info-content {
+        padding: 10px;
+    }
+    
+    .additional-info.active {
+        padding: 10px;
+    }
+    
+    .additional-info .details,
+    .additional-info .includes li,
+    .additional-info .schedule p,
+    .additional-info .requirements p {
+        font-size: 0.9em;
+    }
+    
+    .additional-info h3 {
+        font-size: 0.95em;
+    }
+}

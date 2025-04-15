@@ -87,11 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function renderService(service) {
+        const hasAdditionalInfo = service.additionalInfo ? true : false;
+        
         return `
         <section class="service-card">
             <div class="service-header">
                 <h2>${service.title}</h2>
-                <a href="#" class="more-info">Подробнее...</a>
+                ${hasAdditionalInfo ? 
+                    `<a href="#" class="more-info" data-service="${service.title}">Подробнее...</a>` : 
+                    ''}
             </div>
             <div class="service-content">
                 <div class="service-images">
@@ -106,6 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             </div>
+            ${hasAdditionalInfo ? `
+            <div class="additional-info" id="info-${service.title.replace(/\s+/g, '-').toLowerCase()}">
+                <div class="additional-info-content">
+                    ${service.additionalInfo.details ? `<p class="details">${service.additionalInfo.details}</p>` : ''}
+                    
+                    ${service.additionalInfo.includes ? `
+                    <div class="includes">
+                        <h3>Включено:</h3>
+                        <ul>
+                            ${service.additionalInfo.includes.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>` : ''}
+                    
+                    ${service.additionalInfo.schedule ? `
+                    <div class="schedule">
+                        <h3>Расписание:</h3>
+                        <p>${service.additionalInfo.schedule}</p>
+                    </div>` : ''}
+                    
+                    ${service.additionalInfo.requirements ? `
+                    <div class="requirements">
+                        <h3>Требования:</h3>
+                        <p>${service.additionalInfo.requirements}</p>
+                    </div>` : ''}
+                </div>
+            </div>` : ''}
         </section>`;
     }
 
@@ -116,6 +146,29 @@ document.addEventListener('DOMContentLoaded', () => {
             <p><a href="tel:+375298157831">+375 29 815 78 31</a></p>
             <p>пр-т Строителей 11/А, БЦ "Омега", к.208, Витебск</p>
         </div>`;
+        
+    // Add click event listeners for "Подробнее..." buttons
+    document.querySelectorAll('.more-info').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const serviceTitle = this.getAttribute('data-service');
+            const infoId = `info-${serviceTitle.replace(/\s+/g, '-').toLowerCase()}`;
+            const infoPanel = document.getElementById(infoId);
+            
+            if (infoPanel) {
+                const isActive = infoPanel.classList.contains('active');
+                
+                if (isActive) {
+                    infoPanel.classList.remove('active');
+                    this.textContent = 'Подробнее...';
+                } else {
+                    infoPanel.classList.add('active');
+                    this.textContent = 'Скрыть...';
+                    infoPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            }
+        });
+    });
     
     // Add click event listeners to all service images
     document.querySelectorAll('.preview-trigger').forEach(img => {
