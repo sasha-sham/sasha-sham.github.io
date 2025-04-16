@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let touchStartX = 0;
     let touchEndX = 0;
 
+    // Ensure buttons are clickable by adding click event listeners directly
+    navLinks.forEach(function(button) {
+        button.style.cursor = 'pointer';
+    });
+
     // Toggle menu
     menuToggle.addEventListener('click', function(e) {
         e.preventDefault();
@@ -41,10 +46,23 @@ document.addEventListener('DOMContentLoaded', function() {
         touchEndX = 0;
     }, false);
 
-    // Close menu when clicking a link
+    // Enhanced click handling for mobile
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            closeMenu();
+        // Add both click and touchend events to ensure cross-platform compatibility
+        ['click', 'touchend'].forEach(eventType => {
+            link.addEventListener(eventType, function(e) {
+                // Prevent any default behavior
+                e.preventDefault();
+                // Stop event propagation to prevent issues with parent containers
+                e.stopPropagation();
+                // Navigate to the link's href after closing the menu
+                const href = this.getAttribute('href');
+                closeMenu();
+                // Wait a moment for the menu to close, then navigate
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 50);
+            }, { passive: false });
         });
     });
 

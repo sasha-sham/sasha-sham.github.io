@@ -292,8 +292,16 @@ footer {
         -webkit-tap-highlight-color: transparent;
         user-select: none;
         position: relative;
-        z-index: 1;
+        z-index: 10;
         pointer-events: auto;
+    }
+    
+    /* Add this to ensure the entire button works with touch events */
+    .nav-container a.nav-button {
+        display: block;
+        position: relative;
+        width: 100%;
+        touch-action: manipulation;
     }
 
     .nav-button:hover {
