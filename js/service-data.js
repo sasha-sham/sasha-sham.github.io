@@ -78,12 +78,12 @@ const servicesData = [
         title: 'АРТ-СВИДАНИЕ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/dating-01.jpg',
+                alt: 'Арт-свидание 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/dating-02.jpg',
+                alt: 'Арт-свидание 2'
             }
         ],
         description: 'Может проходить в формате росписи холста, шоппера, футболки, статуэтки – выбор за Вами!',
@@ -99,12 +99,12 @@ const servicesData = [
         title: 'АРТ-ЗАВТРАК ИЛИ УЖИН С ПОДРУГОЙ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/lunch-01.jpg',
+                alt: 'Арт-завтрак или ужин с подругой 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/lunch-02.jpg',
+                alt: 'Арт-завтрак или ужин с подругой 2'
             }
         ],
         description: 'Уютное пространство, душевные разговоры, погружение в творчество, наполнение энергией под бутылочку игристого или чай.',
