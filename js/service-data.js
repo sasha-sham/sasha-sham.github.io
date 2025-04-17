@@ -114,12 +114,12 @@ const servicesData = [
         title: 'АРТ-ДЕВИЧНИК',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/girls-party-01.jpg',
+                alt: 'Арт-девичник 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/girls-party-02.jpg',
+                alt: 'Арт-девичник 2'
             }
         ],
         description: 'Тот самый способ перезагрузки, который Вы искали! Рисовать может каждый - опыт не нужен!',
@@ -129,12 +129,12 @@ const servicesData = [
         title: 'АРТ-КОРПОРАТИВ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/teambuilding-01.jpg',
+                alt: 'Арт-корпоратив 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/teambuilding-02.jpg',
+                alt: 'Арт-корпоратив 2'
             }
         ],
         description: 'Это заряд позитивом, релакс, высвобождение эмоций. Ты - главный человек в своей жизни - подари себе самое лучшее и качественное!',
