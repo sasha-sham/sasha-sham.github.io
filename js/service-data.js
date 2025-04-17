@@ -144,12 +144,12 @@ const servicesData = [
         title: 'АРТ-НАСТОЛЬНЫЕ ИГРЫ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/bgg-01.jpg',
+                alt: 'Арт-настольные игры 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/bgg-02.jpg',
+                alt: 'Арт-настольные игры 2'
             }
         ],
         description: 'Для любителей совместить искусство, интеллект и развлечение. Настольные игры свои или имеющиеся в студии.',
