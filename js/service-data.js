@@ -204,12 +204,12 @@ const servicesData = [
         title: 'ОЖИВШИЕ КАРТИНЫ в Витебске! Бессрочная выставка',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/art-show-01.jpg',
+                alt: 'Ожившие картины 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/art-show-02.jpg',
+                alt: 'Ожившие картины 2'
             }
         ],
         description: 'Такого Вы точно ещё не видели! Образы никого не оставят равнодушными! Удивляйтесь без границ в компании родных и друзей.',
