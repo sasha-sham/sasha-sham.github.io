@@ -159,12 +159,12 @@ const servicesData = [
         title: 'АРТ-КАНИКУЛЫ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/holiday-01.jpg',
+                alt: 'Арт-каникулы 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/holiday-02.jpg',
+                alt: 'Арт-каникулы 2'
             }
         ],
         description: 'Время отдохнуть от школы, расслабиться и зарядиться позитивными эмоциями и творчеством.',
@@ -174,12 +174,12 @@ const servicesData = [
         title: 'ПСИХОЛОГИЧЕСКИЕ СЕССИИ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/sessions-01.jpg',
+                alt: 'Психологические сессии 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/sessions-02.jpg',
+                alt: 'Психологические сессии 2'
             }
         ],
         description: 'Решение проблем: отношения, антистресс, поднятие самооценки, саморазвитие, детская/подростковая терапия, цветотерапия и др.',
