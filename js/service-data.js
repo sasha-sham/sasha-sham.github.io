@@ -219,12 +219,12 @@ const servicesData = [
         title: 'ПРОДАЖА И ОЖИВЛЕНИЕ КАРТИН',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/live-image-01.jpg',
+                alt: 'Продажа и оживление картин 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/live-image-02.jpg',
+                alt: 'Продажа и оживление картин 2'
             }
         ],
         description: 'Современная живопись для ваших стен: женские образы в любом исполнении или "оживи" свой шедевр!',
