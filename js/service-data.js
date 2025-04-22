@@ -234,12 +234,12 @@ const servicesData = [
         title: 'ПОДАРОЧНЫЕ СЕРТИФИКАТЫ',
         images: [
             {
-                src: 'images/comfort.png',
-                alt: 'Комфортная атмосфера'
+                src: 'images/services/certificate-01.jpg',
+                alt: 'Подарочные сертификаты 1'
             },
             {
-                src: 'images/quality.png',
-                alt: 'Качественный досуг'
+                src: 'images/services/certificate-02.jpg',
+                alt: 'Подарочные сертификаты 2'
             }
         ],
         description: 'Подарочные сертификаты в арт-терапевтической студии Sasha Sham на все виды услуг.',
