@@ -11,6 +11,43 @@ Allow: /css/
 Disallow: /js/
 Disallow: /.git/
 
+# AI Bot specific directives
+User-agent: GPTBot
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /feedback.html
+Allow: /contact.html
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+Disallow: /.git/
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /feedback.html
+Allow: /contact.html
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+Disallow: /.git/
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /feedback.html
+Allow: /contact.html
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+Disallow: /.git/
+
 # Sitemap
 Sitemap: https://www.art-sasha.site/sitemap.xml
 
