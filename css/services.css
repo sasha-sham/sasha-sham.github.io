@@ -23,6 +23,12 @@ main {
     margin-bottom: 0.8em;
 }
 
+.service-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 .service-header h2 {
     color: #333;
     margin: 0;
@@ -30,14 +36,24 @@ main {
     font-weight: bold;
 }
 
-.more-info {
+.more-info, .go-to-link {
     color: #666;
     text-decoration: none;
     font-size: 0.9em;
 }
 
-.more-info:hover {
+.more-info:hover, .go-to-link:hover {
     text-decoration: underline;
+}
+
+.go-to-link {
+    color: #27ae60;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.go-to-link:hover {
+    color: #219653;
 }
 
 .service-content {
@@ -127,6 +143,13 @@ main {
         flex-direction: column;
         text-align: center;
         gap: 0.6em;
+    }
+    
+    .service-actions {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
     }
 
     .service-header h2 {

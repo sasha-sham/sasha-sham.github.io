@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Check if there's a hash in the URL and scroll to that element
+    if (window.location.hash) {
+        const targetId = window.location.hash.substring(1);
+        setTimeout(() => {
+            const targetElements = document.querySelectorAll(`[id^="${targetId}"]`);
+            if (targetElements.length > 0) {
+                targetElements[0].scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 300);
+    }
     const mainContainer = document.querySelector('main');
 
     // Create modal elements for image preview
@@ -89,13 +99,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderService(service) {
         const hasAdditionalInfo = service.additionalInfo ? true : false;
         
+        // Extract identifier from the first image path for the go-to link
+        const imagePathParts = service.images[0].src.split('/');
+        const imageName = imagePathParts[imagePathParts.length - 1];
+        const serviceId = imageName.split('-')[0]; // Extract part before the first dash
+        
         return `
-        <section class="service-card">
+        <section class="service-card" id="${serviceId}">
             <div class="service-header">
                 <h2>${service.title}</h2>
-                ${hasAdditionalInfo ? 
-                    `<a href="#" class="more-info" data-service="${service.title}">Подробнее...</a>` : 
-                    ''}
+                    ${hasAdditionalInfo ? 
+                        `<a href="#" class="more-info" data-service="${service.title}">Подробнее...</a>` : 
+                        ''}
             </div>
             <div class="service-content">
                 <div class="service-images">
