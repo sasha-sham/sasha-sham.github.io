@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog>
+    <shop>
+        <categories>
+            <category id="101">Арт-мероприятия</category>
+        </categories>
+        <offers>
+            <offer id="1001">
+                <name>МАСТЕР-КЛАССЫ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>50.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/mk-01.jpg</picture>
+                <description>
+                    Мастер-классы действуют на постоянной основе. Вдохновляющий интерьер, тематические посиделки, позитивные эмоции! Мастер-классы проводятся на регулярной основе и подходят для всех уровней подготовки. Каждое занятие включает теоретическую часть и практику под руководством опытного мастера.
+                </description>
+                <shortDescription>
+                    Мастер-классы действуют на постоянной основе. Вдохновляющий интерьер, тематические посиделки, позитивные эмоции!
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1002">
+                <name>АРТ-ВЕЧЕРИНКА ДЛЯ ВЗРОСЛЫХ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>150.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/adult-party-01.jpg</picture>
+                <description>
+                    Сделай свой досуг незабываемым и оригинальным! Расширяй границы и трансформируйся в компании арт-терапевта. Арт-вечеринка - это прекрасный способ отдохнуть, расслабиться и проявить свои творческие способности в приятной компании. Никаких навыков рисования не требуется!
+                </description>
+                <shortDescription>
+                    Сделай свой досуг незабываемым и оригинальным! Расширяй границы и трансформируйся в компании арт-терапевта.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1003">
+                <name>ДЕТСКАЯ АРТ-ВЕЧЕРИНКА</name>
+                <vendor>Sasha Sham</vendor>
+                <price>150.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/kids-party-01.jpg</picture>
+                <description>
+                    Это отличная возможность развивать свои творческие навыки и провести время с другими детьми, увлечёнными искусством! Детская Арт-вечеринка — это увлекательное и познавательное мероприятие, где дети могут раскрыть свои творческие способности, повеселиться и провести время с друзьями. Навыки рисования не обязательны, главное — желание творить!
+                </description>
+                <shortDescription>
+                    Это отличная возможность развивать свои творческие навыки и провести время с другими детьми, увлечёнными искусством!
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1004">
+                <name>АРТ-ДЕНЬ РОЖДЕНИЯ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>150.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/bd-01.jpg</picture>
+                <description>
+                    Ищите пространство для праздника? Удобный формат: только Вы и Ваши близкие. Рисуем картину, веселимся, получаем подарки. Арт-день рождения — это яркий и незабываемый способ отпраздновать особенный день! Творческая атмосфера, весёлые задания и море положительных эмоций сделают праздник по-настоящему уникальным.
+                </description>
+                <shortDescription>
+                    Ищите пространство для праздника? Удобный формат: только Вы и Ваши близкие. Рисуем картину, веселимся, получаем подарки.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1005">
+                <name>АРТ-СВИДАНИЕ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>100.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/dating-01.jpg</picture>
+                <description>
+                    Может проходить в формате росписи холста, шоппера, футболки, статуэтки – выбор за Вами! Арт-свидание — это романтический и необычный способ провести время вместе! Совместное творчество сближает, наполняет вечер яркими эмоциями и создаёт уникальные воспоминания.
+                </description>
+                <shortDescription>
+                    Может проходить в формате росписи холста, шоппера, футболки, статуэтки – выбор за Вами!
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1006">
+                <name>АРТ-ЗАВТРАК ИЛИ УЖИН С ПОДРУГОЙ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>100.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/lunch-01.jpg</picture>
+                <description>
+                    Уютное пространство, душевные разговоры, погружение в творчество, наполнение энергией под бутылочку игристого или чай. Арт-завтрак или ужин с подругой — это прекрасная возможность провести время вдвоём, наслаждаясь творчеством и приятной беседой.
+                </description>
+                <shortDescription>
+                    Уютное пространство, душевные разговоры, погружение в творчество, наполнение энергией под бутылочку игристого или чай.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1007">
+                <name>АРТ-ДЕВИЧНИК</name>
+                <vendor>Sasha Sham</vendor>
+                <price>150.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/girls-party-01.jpg</picture>
+                <description>
+                    Тот самый способ перезагрузки, который Вы искали! Рисовать может каждый - опыт не нужен! Арт-девичник — это идеальный способ собрать подруг, расслабиться и провести время весело и творчески! Уютная атмосфера, яркие краски и общие эмоции сделают этот вечер незабываемым.
+                </description>
+                <shortDescription>
+                    Тот самый способ перезагрузки, который Вы искали! Рисовать может каждый - опыт не нужен!
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1008">
+                <name>АРТ-КОРПОРАТИВ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>150.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/teambuilding-01.jpg</picture>
+                <description>
+                    Это заряд позитивом, релакс, высвобождение эмоций. Ты - главный человек в своей жизни - подари себе самое лучшее и качественное! Арт-корпоратив — это необычный формат тимбилдинга, который позволяет коллегам раскрыть творческий потенциал, отдохнуть от рутины и наладить дружеские связи.
+                </description>
+                <shortDescription>
+                    Это заряд позитивом, релакс, высвобождение эмоций. Ты - главный человек в своей жизни - подари себе самое лучшее и качественное!
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1009">
+                <name>АРТ-НАСТОЛЬНЫЕ ИГРЫ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>150.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/bgg-01.jpg</picture>
+                <description>
+                    Для любителей совместить искусство, интеллект и развлечение. Настольные игры свои или имеющиеся в студии. Арт-настольные игры это сочетание творчества и весёлого досуга! Погрузитесь в увлекательный мир настольных игр, а затем попробуйте свои силы в рисовании.
+                </description>
+                <shortDescription>
+                    Для любителей совместить искусство, интеллект и развлечение. Настольные игры свои или имеющиеся в студии.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1010">
+                <name>АРТ-КАНИКУЛЫ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>15.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/holiday-01.jpg</picture>
+                <description>
+                    Время отдохнуть от школы, расслабиться и зарядиться позитивными эмоциями и творчеством. Арт-каникулы это отдых от уроков, раскрытие творческого потенциала, релакс с различными техниками и веселье в дружеской атмосфере.
+                </description>
+                <shortDescription>
+                    Время отдохнуть от школы, расслабиться и зарядиться позитивными эмоциями и творчеством.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1011">
+                <name>ПСИХОЛОГИЧЕСКИЕ СЕССИИ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>75.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/sessions-01.jpg</picture>
+                <description>
+                    Решение проблем: отношения, антистресс, поднятие самооценки, саморазвитие, детская/подростковая терапия, цветотерапия и др. Психологические сессии с арт-терапевтом — это возможность выразить свои эмоции и мысли через творчество, найти внутренние ресурсы и обрести гармонию.
+                </description>
+                <shortDescription>
+                    Решение проблем: отношения, антистресс, поднятие самооценки, саморазвитие, детская/подростковая терапия, цветотерапия и др.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1012">
+                <name>АРТ-ВСТРЕЧИ С ДЕТЬМИ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>40.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/kids-sessions-01.jpg</picture>
+                <description>
+                    Рисование+Психология, Анализ детских рисунков арт-терапевтом + онлайн консультация. Арт-встречи с детьми — это увлекательное сочетание творчества и психологической поддержки. На таких занятиях дети смогут выразить свои эмоции через искусство, раскрыть свой потенциал и получить полезные навыки для общения и самопознания.
+                </description>
+                <shortDescription>
+                    Рисование+Психология, Анализ детских рисунков арт-терапевтом + онлайн консультация.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1013">
+                <name>ОЖИВШИЕ КАРТИНЫ в Витебске! Бессрочная выставка</name>
+                <vendor>Sasha Sham</vendor>
+                <price>20.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/art-show-01.jpg</picture>
+                <description>
+                    Такого Вы точно ещё не видели! Образы никого не оставят равнодушными! Удивляйтесь без границ в компании родных и друзей. Выставка "Ожившие картины" — это уникальное погружение в мир искусства, где классические и современные произведения оживают благодаря технологиям искусственного интеллекта и дополненной реальности.
+                </description>
+                <shortDescription>
+                    Такого Вы точно ещё не видели! Образы никого не оставят равнодушными! Удивляйтесь без границ в компании родных и друзей.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1014">
+                <name>ПРОДАЖА И ОЖИВЛЕНИЕ КАРТИН</name>
+                <vendor>Sasha Sham</vendor>
+                <price>50.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/live-image-01.jpg</picture>
+                <description>
+                    Современная живопись для ваших стен: женские образы в любом исполнении или "оживи" свой шедевр! Продажа картин — уникальные произведения искусства для вашего интерьера или подарка. Оживление ваших работ — превратите свои рисунки или картины в интерактивные произведения с помощью технологий дополненной реальности!
+                </description>
+                <shortDescription>
+                    Современная живопись для ваших стен: женские образы в любом исполнении или "оживи" свой шедевр!
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+            <offer id="1015">
+                <name>ПОДАРОЧНЫЕ СЕРТИФИКАТЫ</name>
+                <vendor>Sasha Sham</vendor>
+                <price>20.00</price>
+                <currencyId>BYN</currencyId>
+                <categoryId>101</categoryId>
+                <picture>https://sasha-sham.github.io/images/services/certificate-01.jpg</picture>
+                <description>
+                    Подарочные сертификаты в арт-терапевтической студии Sasha Sham на все виды услуг. Подарочные сертификаты — подарок, который вдохновляет! Идеальный вариант для любого возраста. Подходит для любого уровня подготовки. Дарите творчество и внутреннюю гармонию.
+                </description>
+                <shortDescription>
+                    Подарочные сертификаты в арт-терапевтической студии Sasha Sham на все виды услуг.
+                </shortDescription>
+                <url>https://sasha-sham.github.io/services.html</url>
+            </offer>
+        </offers>
+    </shop>
+</yml_catalog>
