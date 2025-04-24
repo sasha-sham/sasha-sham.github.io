@@ -273,9 +273,6 @@ footer {
     }
 
     .nav-button {
-        display: block;
-        cursor: pointer;
-        width: 100%;
         height: auto;
         min-height: 44px;
         margin: 0;
@@ -285,14 +282,11 @@ footer {
         align-content: center;
         background-color: transparent;
         color: #000;
-        border: none;
-        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
         font-weight: 400;
         transition: background-color 0.2s ease;
         text-decoration: none;
         -webkit-tap-highlight-color: transparent;
         user-select: none;
-        position: relative;
         z-index: 10;
         pointer-events: auto;
     }
