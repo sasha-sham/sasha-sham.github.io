@@ -300,8 +300,8 @@ const servicesData = [
                 alt: 'Подарочные сертификаты 1'
             },
             {
-                src: 'images/services/certificate-02.jpg',
-                alt: 'Подарочные сертификаты 2'
+                src: 'images/services/certificate-03.jpg',
+                alt: 'Подарочные сертификаты 3'
             }
         ],
         description: 'Подарочные сертификаты в арт-терапевтической студии Sasha Sham на все виды услуг.',
