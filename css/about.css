@@ -16,11 +16,15 @@
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    width: 35vw; /* Responsive width based on viewport width */
+    max-width: 400px; /* Maximum size cap */
+    min-width: 280px; /* Minimum size */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1/1; /* Keep square shape */
+    border-radius: 15px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Smooth resizing */
 }
 
 .profile-info {
@@ -134,8 +138,8 @@
 
 @media (max-width: 767px) {
     .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 50vw;
+        min-width: 250px;
     }
 
     .about-section {
@@ -150,8 +154,8 @@
 
 @media (max-width: 480px) {
     .profile-image {
-        width: 150px;
-        height: 150px;
+        width: 75vw;
+        min-width: 200px;
     }
 
     .about-section {
