@@ -54,6 +54,10 @@ body {
     color: #666;
     font-size: 1.1em;
     margin: 1rem 0;
+    text-align: justify;
+    width: 100%;
+    display: block;
+    line-height: 1.5;
 }
 
 .menu-toggle {
