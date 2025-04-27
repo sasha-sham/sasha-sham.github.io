@@ -29,7 +29,19 @@
     max-height: 50vh;
     object-fit: contain;
     border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: opacity 0.3s ease-in;
+}
+
+.carousel-slide picture {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.lazy-image[data-src] {
+    opacity: 0.5; /* Slightly transparent while loading */
 }
 
 .carousel-controls {
@@ -81,6 +93,19 @@
     font-weight: 500;
 }
 
+
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+.lazy-image[data-src] {
+    animation: pulse 1.5s infinite;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .carousel-text-button {
@@ -119,4 +144,6 @@
     .carousel-slide {
         padding: 1rem;
     }
+    
+
 }
