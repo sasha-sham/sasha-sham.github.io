@@ -6,6 +6,12 @@ body {
     color: #333;
 }
 
+h1 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    font-weight: 500;
+}
+
 .about-intro {
     padding: 2rem 1rem;
     background-color: #fff;
@@ -131,6 +137,37 @@ footer {
     position: relative;
     width: 100%;
     bottom: 0;
+    padding: 0.5rem 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin: 0.2rem 0;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #020202;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFBF00;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+}
+
+.social-icon {
+    margin-right: 5px;
+    font-size: 1.2rem;
 }
 
 /* Buttons */
