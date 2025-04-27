@@ -140,6 +140,15 @@ footer {
     padding: 0.5rem 0;
 }
 
+.rating-social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0.5rem auto;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
