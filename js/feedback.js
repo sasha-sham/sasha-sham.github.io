@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initCarousel() {
-    const totalImages = 28;
+    const totalImages = 30;
     createCarouselSlides(totalImages);
     setupCarouselNavigation(totalImages);
     document.getElementById('total-slides').textContent = totalImages;
