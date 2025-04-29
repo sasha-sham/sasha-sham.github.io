@@ -15,10 +15,7 @@
     margin-bottom: 15px;
     font-weight: 600;
     position: relative;
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block;
 }
 
 .gallery-intro-card h2:after {
