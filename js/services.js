@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     ${service.additionalInfo.requirements ? `
                     <div class="requirements">
-                        <h3>Требования:</h3>
+                        <h3>Детали:</h3>
                         <p>${service.additionalInfo.requirements}</p>
                     </div>` : ''}
                 </div>

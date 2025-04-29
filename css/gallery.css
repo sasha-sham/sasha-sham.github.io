@@ -1,3 +1,48 @@
+/* Gallery Intro Card Styles */
+.gallery-intro-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-left: 5px solid #FFBF00;
+    text-align: justify;
+}
+
+.gallery-intro-card h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-intro-card h2:after {
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 3px;
+    background-color: #FFBF00;
+    bottom: -5px;
+    left: 15%;
+}
+
+.gallery-intro-card p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+}
+
+.gallery-intro-card p:last-child {
+    font-weight: 500;
+    color: #333;
+}
+
 /* Gallery Styles */
 .gallery {
     display: grid;
