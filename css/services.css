@@ -42,25 +42,6 @@ main {
     font-size: 0.9em;
 }
 
-.more-info {
-    display: inline-block;
-    padding: 5px 12px;
-    border-radius: 4px;
-    background-color: #FFBF00;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.9em;
-    box-shadow: 0 2px 4px rgba(255, 191, 0, 0.3);
-    cursor: pointer;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.more-info.active {
-    background-color: #555;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
 .go-to-link:hover {
     text-decoration: underline;
 }
@@ -415,8 +396,6 @@ main {
 
 /* Update More Info button styles */
 .more-info {
-    color: #666;
-    text-decoration: none;
     font-size: 0.9em;
     transition: color 0.2s;
     cursor: pointer;
@@ -425,6 +404,23 @@ main {
 .more-info:hover {
     color: #27ae60;
     text-decoration: underline;
+}
+
+.more-info {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 4px;
+    color: #27ae60;
+    text-decoration: underline;
+    font-size: 0.9em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.more-info.active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive adjustments for additional info */
