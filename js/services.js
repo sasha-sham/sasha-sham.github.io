@@ -175,9 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (isActive) {
                     infoPanel.classList.remove('active');
+                    this.classList.remove('active');
                     this.textContent = 'Подробнее...';
                 } else {
                     infoPanel.classList.add('active');
+                    this.classList.add('active');
                     this.textContent = 'Скрыть...';
                     infoPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
