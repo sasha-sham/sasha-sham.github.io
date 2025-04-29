@@ -49,6 +49,22 @@ main {
 .go-to-link {
     color: #27ae60;
     font-weight: 500;
+}
+
+.catalog-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #FFBF00;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFBF00;
+    transition: all 0.3s ease;
+}
+
+.catalog-link:hover {
+    color: #e6ac00;
+    border-bottom: 1px solid #e6ac00;
+    text-decoration: none;
     transition: all 0.2s ease;
 }
 
