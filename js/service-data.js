@@ -154,8 +154,8 @@ const servicesData = [
                 alt: 'Арт-корпоратив 1'
             },
             {
-                src: 'images/services/teambuilding-02.jpg',
-                alt: 'Арт-корпоратив 2'
+                src: 'images/services/teambuilding-03.jpg',
+                alt: 'Арт-корпоратив 3'
             }
         ],
         description: 'Это заряд позитивом, релакс, высвобождение эмоций. Ты - главный человек в своей жизни - подари себе самое лучшее и качественное!',
