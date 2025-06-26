@@ -294,6 +294,33 @@ footer {
     margin-bottom: 1rem;
     border-bottom: 2px solid #FFBF00;
     padding-bottom: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.about-section h3::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    font-size: 0.8em;
+    color: #FFBF00;
+    transition: transform 0.3s ease;
+}
+
+.about-section.collapsed h3::after {
+    transform: rotate(-90deg);
+}
+
+.about-section .card-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.about-section.collapsed .card-content {
+    max-height: 0;
+    overflow: hidden;
 }
 
 .about-section ul {
