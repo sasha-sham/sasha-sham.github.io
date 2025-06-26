@@ -5,6 +5,9 @@ try {
     let currentPage = 0;
     const imagesPerPage = 9; // 3x3 grid
     const totalPages = Math.ceil(GalleryData.totalImages / imagesPerPage);
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let currentImageIndex = 0;
     
     // Update total pages counter in UI
     document.getElementById('total-pages').textContent = totalPages;
@@ -39,6 +42,10 @@ try {
             img.src = imagePath;
             img.className = 'gallery-item';
             img.dataset.index = i - 1;
+            img.dataset.fullIndex = i;
+            
+            // Add click event for preview
+            img.addEventListener('click', openLightbox);
             
             // Add error handling for images
             img.onerror = function() {
@@ -77,6 +84,38 @@ try {
         updateButtonStates();
     }
 
+    // Lightbox functions
+    function openLightbox(e) {
+        const fullIndex = parseInt(e.target.dataset.fullIndex);
+        if (isNaN(fullIndex) || fullIndex < 1 || fullIndex > GalleryData.totalImages) {
+            console.error('Invalid image index:', fullIndex);
+            return;
+        }
+        currentImageIndex = fullIndex;
+        updateLightboxImage();
+        lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+    }
+
+    function updateLightboxImage() {
+        const imagePath = getImagePath(currentImageIndex);
+        if (!imagePath) {
+            console.error('Failed to update lightbox image');
+            return;
+        }
+        lightboxImg.src = imagePath;
+    }
+    
+    // Handle clicks outside the image to close lightbox
+    function handleLightboxClick(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    }
+    
     // Function to update button states based on current page
     function updateButtonStates() {
         const prevButton = document.querySelector('.prev-page-button');
@@ -93,6 +132,7 @@ try {
     function setupNavigation() {
         const prevButton = document.querySelector('.prev-page-button');
         const nextButton = document.querySelector('.next-page-button');
+        const closeButton = document.querySelector('.close-lightbox');
         
         prevButton.addEventListener('click', function() {
             if (currentPage > 0) {
@@ -108,12 +148,27 @@ try {
             }
         });
         
+        // Setup lightbox close button
+        closeButton.addEventListener('click', closeLightbox);
+        
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', handleLightboxClick);
+        
         // Add keyboard navigation
         document.addEventListener('keydown', handleKeyPress);
     }
     
     // Handle keyboard navigation
     function handleKeyPress(e) {
+        // Handle lightbox escape key
+        if (lightbox.classList.contains('active')) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                return;
+            }
+        }
+        
+        // Handle gallery pagination
         if (e.key === 'ArrowLeft') {
             if (currentPage > 0) {
                 currentPage--;
@@ -130,6 +185,12 @@ try {
     // Cleanup function for memory management
     function cleanup() {
         document.removeEventListener('keydown', handleKeyPress);
+        lightbox.removeEventListener('click', handleLightboxClick);
+        
+        // Remove click listeners from images
+        images.forEach(img => {
+            img.removeEventListener('click', openLightbox);
+        });
     }
 
     // Initialize gallery
