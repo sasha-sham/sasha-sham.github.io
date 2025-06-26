@@ -2,7 +2,13 @@
 try {
     const gallery = document.getElementById('gallery');
     const images = [];
-
+    let currentPage = 0;
+    const imagesPerPage = 9; // 3x3 grid
+    const totalPages = Math.ceil(GalleryData.totalImages / imagesPerPage);
+    
+    // Update total pages counter in UI
+    document.getElementById('total-pages').textContent = totalPages;
+    
     // Validate and get image path
     function getImagePath(index) {
         if (!/^\d+$/.test(String(index)) || index < 1 || index > GalleryData.totalImages) {
@@ -11,58 +17,124 @@ try {
         }
         return `gallery/image-${String(index).padStart(3, '0')}.jpg`;
     }
-
-    // Create gallery images
-    for (let i = 1; i <= GalleryData.totalImages; i++) {
-        const container = document.createElement('div');
-        container.className = 'gallery-item-container';
-
-        const img = document.createElement('img');
-        const imagePath = getImagePath(i);
-        if (!imagePath) continue;
-
-        img.src = imagePath;
-        img.className = 'gallery-item';
-        img.dataset.index = i - 1;
+    
+    // Create gallery images for the current page
+    function loadGalleryPage(pageIndex) {
+        // Clear existing gallery items
+        gallery.innerHTML = '';
+        images.length = 0;
         
-        // Add error handling for images
-        img.onerror = function() {
-            this.src = 'images/placeholder.jpg';
-            this.alt = 'Image not found';
-        };
+        // Calculate start and end indices for current page
+        const startIndex = pageIndex * imagesPerPage + 1;
+        const endIndex = Math.min(startIndex + imagesPerPage - 1, GalleryData.totalImages);
+        
+        for (let i = startIndex; i <= endIndex; i++) {
+            const container = document.createElement('div');
+            container.className = 'gallery-item-container';
 
-        // Add AR label to specific items
-        if (GalleryData.hasArContent(i)) {
-            const arLabel = document.createElement('div');
-            arLabel.className = 'ar-label';
-            arLabel.textContent = 'AR';
-            container.appendChild(arLabel);
+            const img = document.createElement('img');
+            const imagePath = getImagePath(i);
+            if (!imagePath) continue;
+
+            img.src = imagePath;
+            img.className = 'gallery-item';
+            img.dataset.index = i - 1;
+            
+            // Add error handling for images
+            img.onerror = function() {
+                this.src = 'images/placeholder.jpg';
+                this.alt = 'Image not found';
+            };
+
+            // Add AR label to specific items
+            if (GalleryData.hasArContent(i)) {
+                const arLabel = document.createElement('div');
+                arLabel.className = 'ar-label';
+                arLabel.textContent = 'AR';
+                container.appendChild(arLabel);
+            }
+
+            // Check if the item is sold
+            if (GalleryData.isItemSold(i)) {
+                const soldOverlay = document.createElement('div');
+                soldOverlay.className = 'sold-overlay';
+                soldOverlay.textContent = 'Продано';
+                container.appendChild(soldOverlay);
+            }
+
+            // Add image to container
+            container.appendChild(img);
+            // Add container to gallery
+            gallery.appendChild(container);
+            // Store image reference
+            images.push(img);
         }
-
-        // Check if the item is sold
-        if (GalleryData.isItemSold(i)) {
-            const soldOverlay = document.createElement('div');
-            soldOverlay.className = 'sold-overlay';
-            soldOverlay.textContent = 'Продано';
-            container.appendChild(soldOverlay);
-        }
-
-        // Add image to container
-        container.appendChild(img);
-        // Add container to gallery
-        gallery.appendChild(container);
-        // Store image reference
-        images.push(img);
-
-
+        
+        // Update current page number in UI
+        document.getElementById('current-page').textContent = pageIndex + 1;
+        
+        // Update button states
+        updateButtonStates();
     }
 
-    // No lightbox functionality
-
+    // Function to update button states based on current page
+    function updateButtonStates() {
+        const prevButton = document.querySelector('.prev-page-button');
+        const nextButton = document.querySelector('.next-page-button');
+        
+        // Disable prev button on first page
+        prevButton.disabled = currentPage === 0;
+        
+        // Disable next button on last page
+        nextButton.disabled = currentPage === totalPages - 1;
+    }
+    
+    // Set up navigation buttons
+    function setupNavigation() {
+        const prevButton = document.querySelector('.prev-page-button');
+        const nextButton = document.querySelector('.next-page-button');
+        
+        prevButton.addEventListener('click', function() {
+            if (currentPage > 0) {
+                currentPage--;
+                loadGalleryPage(currentPage);
+            }
+        });
+        
+        nextButton.addEventListener('click', function() {
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+                loadGalleryPage(currentPage);
+            }
+        });
+        
+        // Add keyboard navigation
+        document.addEventListener('keydown', handleKeyPress);
+    }
+    
+    // Handle keyboard navigation
+    function handleKeyPress(e) {
+        if (e.key === 'ArrowLeft') {
+            if (currentPage > 0) {
+                currentPage--;
+                loadGalleryPage(currentPage);
+            }
+        } else if (e.key === 'ArrowRight') {
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+                loadGalleryPage(currentPage);
+            }
+        }
+    }
+    
     // Cleanup function for memory management
     function cleanup() {
-        // No event listeners to clean up
+        document.removeEventListener('keydown', handleKeyPress);
     }
+
+    // Initialize gallery
+    setupNavigation();
+    loadGalleryPage(currentPage);
 
     // Add cleanup on page unload
     window.addEventListener('unload', cleanup);
