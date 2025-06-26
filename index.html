@@ -226,25 +226,7 @@
     <p>&copy; 2025 ИП Дубинкина Александра Олеговна</p>
   </footer>
 
-  <script>
-    // Make cards collapsible
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get all card headers
-      const cardHeaders = document.querySelectorAll('.about-section h3');
-      
-      // Add click event to each header
-      cardHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-          const card = this.closest('.about-section');
-          card.classList.toggle('collapsed');
-        });
-        
-        // By default, add collapsed class to all sections
-        const card = header.closest('.about-section');
-        card.classList.add('collapsed');
-      });
-    });
-  </script>
+  <script src="js/collapsible.js"></script>
 
 </body>
 
