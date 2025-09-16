@@ -6,6 +6,7 @@ Allow: /services.html
 Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
+Allow: /events.html
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -19,6 +20,7 @@ Allow: /services.html
 Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
+Allow: /events.html
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -31,6 +33,7 @@ Allow: /services.html
 Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
+Allow: /events.html
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -43,6 +46,7 @@ Allow: /services.html
 Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
+Allow: /events.html
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -62,4 +66,31 @@ Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term
 
 # Yandex specific
 User-agent: Yandex
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /feedback.html
+Allow: /contact.html
+Allow: /events.html
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+Disallow: /.git/
 Clean-param: yclid&ymclid
+
+# Yandex Alisa
+User-agent: YandexBot
+User-agent: AliceBot
+User-agent: YandexAlice
+Allow: /
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /feedback.html
+Allow: /contact.html
+Allow: /events.html
+Allow: /images/
+Allow: /css/
+Disallow: /js/
+Disallow: /.git/
