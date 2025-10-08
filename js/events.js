@@ -127,18 +127,31 @@ document.addEventListener('DOMContentLoaded', () => {
         let filteredEvents = [];
         
         if (category === 'all') {
-            filteredEvents = eventsData;
+            const todayCopy = new Date(today);
+            const upcoming = eventsData
+                .filter(event => new Date(event.date) >= todayCopy)
+                .sort((a, b) => new Date(a.date) - new Date(b.date)); // soonest first
+            const past = eventsData
+                .filter(event => new Date(event.date) < todayCopy)
+                .sort((a, b) => new Date(b.date) - new Date(a.date)); // most recent past first
+            filteredEvents = [...upcoming, ...past];
         } else if (category === 'upcoming') {
             filteredEvents = eventsData.filter(event => {
                 const eventDate = new Date(event.date);
                 return eventDate >= today;
             });
         } else {
-            filteredEvents = eventsData.filter(event => event.category === category);
+            // Only upcoming for specific categories
+            filteredEvents = eventsData.filter(event => {
+                const eventDate = new Date(event.date);
+                return event.category === category && eventDate >= today;
+            });
         }
         
-        // Sort events by date (closest first)
-        filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+        // Sort events by date (closest first) for non-'all' categories
+        if (category !== 'all') {
+            filteredEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+        }
         
         // Display events or empty message
         if (filteredEvents.length > 0) {
@@ -178,8 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Initial render - show all events by default
-    filterEvents('all');
+    // Initial render - show upcoming events by default
+    filterEvents('upcoming');
     
     // If hash exists in URL, scroll to that event
     if (window.location.hash) {
