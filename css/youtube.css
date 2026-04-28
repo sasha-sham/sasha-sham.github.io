@@ -74,22 +74,6 @@
   background: #FFBF00;
 }
 
-/* WebAR QR card */
-.qr-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
-  background: #f9f9f9;
-}
-.qr-wrapper img {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
-}
-
 .youtube-note {
   max-width: 980px;
   margin: 12px auto 24px auto;
