@@ -365,7 +365,7 @@
 
     scene.addEventListener('loaded', () => {
       scene.querySelectorAll('[mindar-image-target]').forEach(entity => {
-        const idx   = entity.getAttribute('mindar-image-target').replace('targetIndex: ', '');
+        const idx   = entity.getAttribute('mindar-image-target').targetIndex;
         const video = document.getElementById('v' + idx);
         if (!video) return;
 
