@@ -194,7 +194,7 @@
   <!-- AR Scene — autoStart: false, запускается вручную после разблокировки видео -->
   <a-scene
     id="ar-scene"
-    mindar-image="imageTargetSrc: ar/targets.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no;"
+    mindar-image="imageTargetSrc: ar/targets.mind; autoStart: false; uiLoading: no; uiError: no; uiScanning: no; filterMinCF: 0.00001; filterBeta: 0.001;"
     color-space="sRGB"
     renderer="colorManagement: true; antialias: true;"
     vr-mode-ui="enabled: false"
@@ -231,86 +231,86 @@
 
     <!--
       a-plane с shader: flat — видео без затемнения от освещения сцены.
-      width="1" height="1.7778" = 9:16 (вертикальное видео).
+      width="1" height="1.5" = 2:3 (вертикальное видео).
     -->
     <a-entity mindar-image-target="targetIndex: 0">
-      <a-plane src="#v0" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v0"></a-plane>
+      <a-plane src="#v0" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v0"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 1">
-      <a-plane src="#v1" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v1"></a-plane>
+      <a-plane src="#v1" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v1"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 2">
-      <a-plane src="#v2" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v2"></a-plane>
+      <a-plane src="#v2" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v2"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 3">
-      <a-plane src="#v3" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v3"></a-plane>
+      <a-plane src="#v3" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v3"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 4">
-      <a-plane src="#v4" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v4"></a-plane>
+      <a-plane src="#v4" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v4"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 5">
-      <a-plane src="#v5" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v5"></a-plane>
+      <a-plane src="#v5" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v5"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 6">
-      <a-plane src="#v6" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v6"></a-plane>
+      <a-plane src="#v6" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v6"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 7">
-      <a-plane src="#v7" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v7"></a-plane>
+      <a-plane src="#v7" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v7"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 8">
-      <a-plane src="#v8" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v8"></a-plane>
+      <a-plane src="#v8" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v8"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 9">
-      <a-plane src="#v9" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v9"></a-plane>
+      <a-plane src="#v9" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v9"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 10">
-      <a-plane src="#v10" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v10"></a-plane>
+      <a-plane src="#v10" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v10"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 11">
-      <a-plane src="#v11" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v11"></a-plane>
+      <a-plane src="#v11" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v11"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 12">
-      <a-plane src="#v12" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v12"></a-plane>
+      <a-plane src="#v12" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v12"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 13">
-      <a-plane src="#v13" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v13"></a-plane>
+      <a-plane src="#v13" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v13"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 14">
-      <a-plane src="#v14" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v14"></a-plane>
+      <a-plane src="#v14" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v14"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 15">
-      <a-plane src="#v15" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v15"></a-plane>
+      <a-plane src="#v15" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v15"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 16">
-      <a-plane src="#v16" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v16"></a-plane>
+      <a-plane src="#v16" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v16"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 17">
-      <a-plane src="#v17" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v17"></a-plane>
+      <a-plane src="#v17" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v17"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 18">
-      <a-plane src="#v18" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v18"></a-plane>
+      <a-plane src="#v18" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v18"></a-plane>
     </a-entity>
 
     <a-entity mindar-image-target="targetIndex: 19">
-      <a-plane src="#v19" width="1" height="1.7778" position="0 0 0.001" material="shader: flat; src: #v19"></a-plane>
+      <a-plane src="#v19" width="1" height="1.5" position="0 0 0.001" material="shader: flat; src: #v19"></a-plane>
     </a-entity>
 
   </a-scene>
