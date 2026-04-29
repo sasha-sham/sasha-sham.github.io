@@ -205,26 +205,26 @@
         Порядок видео (v0…v19) должен совпадать с порядком картинок
         при компиляции targets.mind
       -->
-      <video id="v0"  src="ar/videos/video-0.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v1"  src="ar/videos/video-1.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v2"  src="ar/videos/video-2.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v3"  src="ar/videos/video-3.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v4"  src="ar/videos/video-4.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v5"  src="ar/videos/video-5.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v6"  src="ar/videos/video-6.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v7"  src="ar/videos/video-7.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v8"  src="ar/videos/video-8.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v9"  src="ar/videos/video-9.mp4"  muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v10" src="ar/videos/video-10.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v11" src="ar/videos/video-11.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v12" src="ar/videos/video-12.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v13" src="ar/videos/video-13.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v14" src="ar/videos/video-14.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v15" src="ar/videos/video-15.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v16" src="ar/videos/video-16.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v17" src="ar/videos/video-17.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v18" src="ar/videos/video-18.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
-      <video id="v19" src="ar/videos/video-19.mp4" muted loop playsinline webkit-playsinline preload="metadata"></video>
+      <video id="v0"  src="ar/videos/video-0.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v1"  src="ar/videos/video-1.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v2"  src="ar/videos/video-2.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v3"  src="ar/videos/video-3.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v4"  src="ar/videos/video-4.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v5"  src="ar/videos/video-5.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v6"  src="ar/videos/video-6.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v7"  src="ar/videos/video-7.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v8"  src="ar/videos/video-8.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v9"  src="ar/videos/video-9.mp4"  autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v10" src="ar/videos/video-10.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v11" src="ar/videos/video-11.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v12" src="ar/videos/video-12.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v13" src="ar/videos/video-13.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v14" src="ar/videos/video-14.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v15" src="ar/videos/video-15.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v16" src="ar/videos/video-16.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v17" src="ar/videos/video-17.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v18" src="ar/videos/video-18.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
+      <video id="v19" src="ar/videos/video-19.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto"></video>
     </a-assets>
 
     <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -328,22 +328,6 @@
     let soundOn     = true;
     let activeVideo = null;
 
-    document.getElementById('start-btn').addEventListener('click', async () => {
-      splash.classList.add('hidden');
-      loading.classList.add('visible');
-
-      // iOS unlock: play every video (muted) then immediately pause.
-      // This must happen inside a user-gesture handler — after this,
-      // video.play() will work from non-gesture events like targetFound.
-      await Promise.all(videos.map(v => {
-        v.muted = true;
-        return v.play().then(() => { v.pause(); v.currentTime = 0; }).catch(() => {});
-      }));
-
-      // Start MindAR after videos are unlocked
-      scene.systems['mindar-image-system'].start();
-    });
-
     scene.addEventListener('arReady', () => {
       loading.classList.remove('visible');
       loading.classList.add('hidden');
@@ -363,6 +347,7 @@
       iconOff.style.display = soundOn ? 'none'  : 'block';
     });
 
+    // Wire targets and start button only after scene is ready
     scene.addEventListener('loaded', () => {
       scene.querySelectorAll('[mindar-image-target]').forEach(entity => {
         const idx   = entity.getAttribute('mindar-image-target').targetIndex;
@@ -373,6 +358,7 @@
           hint.classList.add('hidden');
           activeVideo = video;
           video.currentTime = 0;
+          // Videos are autoplay muted — just unmute and ensure playing
           video.muted = !soundOn;
           video.play().catch(() => {
             video.muted = true;
@@ -381,11 +367,18 @@
         });
 
         entity.addEventListener('targetLost', () => {
-          video.pause();
+          video.muted = true;
           video.currentTime = 0;
           activeVideo = null;
           hint.classList.remove('hidden');
         });
+      });
+
+      // Start button wired here — guarantees scene.systems exists
+      document.getElementById('start-btn').addEventListener('click', () => {
+        splash.classList.add('hidden');
+        loading.classList.add('visible');
+        scene.systems['mindar-image-system'].start();
       });
     });
   </script>
