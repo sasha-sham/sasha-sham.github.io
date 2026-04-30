@@ -313,7 +313,7 @@ footer {
 }
 
 .about-section .card-content {
-    max-height: 1000px;
+    max-height: 3000px;
     overflow: hidden;
     transition: max-height 0.5s ease;
 }
