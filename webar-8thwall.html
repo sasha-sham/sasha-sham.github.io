@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-fullscreen">
+  <title>WebAR (8th Wall) | Sasha Sham</title>
+
+  <!-- 8frame: 8th Wall's modified A-Frame (legacy CDN, still serves) -->
+  <script src="https://cdn.8thwall.com/web/aframe/8frame-1.5.0.min.js"></script>
+
+  <!-- xrextras: helper components (open source, MIT) -->
+  <script src="https://cdn.jsdelivr.net/npm/@8thwall/xrextras@1/dist/xrextras.js" crossorigin="anonymous"></script>
+
+  <!-- Engine binary (free, no appKey required since 2026 OSS release) -->
+  <script async src="https://cdn.jsdelivr.net/npm/@8thwall/engine-binary@1/dist/xr.js" crossorigin="anonymous" data-preload-chunks="slam"></script>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      overflow: hidden;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    a-scene {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      z-index: 200;
+      color: #fff;
+    }
+
+    #splash.hidden { display: none; }
+
+    #splash h2 {
+      font-size: 22px;
+      font-weight: 600;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    #splash p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.65);
+      text-align: center;
+      padding: 0 32px;
+      line-height: 1.5;
+    }
+
+    #splash small {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+    }
+
+    #start-btn {
+      background: #e8a0b0;
+      color: #fff;
+      border: none;
+      border-radius: 32px;
+      padding: 16px 48px;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    #loading {
+      position: fixed;
+      inset: 0;
+      background: #1a1a1a;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      z-index: 150;
+      color: #fff;
+    }
+
+    #loading.visible { display: flex; }
+    #loading.hidden  { display: none; }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-top-color: #e8a0b0;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    #hint {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-size: 15px;
+      white-space: nowrap;
+      z-index: 20;
+      opacity: 1;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+
+    #hint.hidden { opacity: 0; }
+
+    #sound-btn {
+      position: fixed;
+      top: 24px;
+      right: 20px;
+      width: 44px;
+      height: 44px;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 30;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #sound-btn svg { width: 22px; height: 22px; fill: #fff; }
+
+    #error {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(30,0,0,0.9);
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.5;
+      z-index: 300;
+      max-width: 300px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="splash">
+    <h2>WebAR · 8th Wall test</h2>
+    <p>Наведи камеру на рисунок и смотри, как он оживает</p>
+    <button id="start-btn">Начать</button>
+    <small>тестовая страница для сравнения с MindAR</small>
+  </div>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    <p style="font-size:15px;color:rgba(255,255,255,0.75)">Запуск камеры…</p>
+  </div>
+
+  <div id="error">
+    <p>Нет доступа к камере или движок не загрузился.<br>Разрешите доступ и перезагрузите страницу.</p>
+  </div>
+
+  <div id="hint">Наведи камеру на рисунок</div>
+
+  <button id="sound-btn" aria-label="Звук">
+    <svg id="icon-on" viewBox="0 0 24 24">
+      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+    </svg>
+    <svg id="icon-off" viewBox="0 0 24 24" style="display:none">
+      <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+    </svg>
+  </button>
+
+  <a-scene
+    id="ar-scene"
+    xrweb="disableWorldTracking: true"
+    xrextras-runtime-error
+    color-space="sRGB"
+    renderer="colorManagement: true; antialias: true;"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+
+    <a-assets>
+      <video id="v0" src="ar/videos/video-0.mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" crossorigin="anonymous"></video>
+    </a-assets>
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <!--
+      width / height соответствуют пропорции таргета 1365x2048 (~2:3) с
+      overscan 10%, чтобы видео полностью перекрывало картинку.
+      В 8th Wall плоскость по умолчанию ориентирована в плоскости таргета,
+      single unit = ширина таргета.
+    -->
+    <xrextras-named-image-target name="target-0">
+      <a-plane
+        src="#v0"
+        material="shader: flat; src: #v0"
+        position="0 0 0.001"
+        width="1.1"
+        height="1.65"
+        rotation="-90 0 0">
+      </a-plane>
+    </xrextras-named-image-target>
+
+  </a-scene>
+
+  <script>
+    const splash    = document.getElementById('splash');
+    const loading   = document.getElementById('loading');
+    const hint      = document.getElementById('hint');
+    const errorBox  = document.getElementById('error');
+    const soundBtn  = document.getElementById('sound-btn');
+    const iconOn    = document.getElementById('icon-on');
+    const iconOff   = document.getElementById('icon-off');
+    const scene     = document.getElementById('ar-scene');
+    const video0    = document.getElementById('v0');
+
+    let soundOn     = true;
+    let started     = false;
+
+    // 8th Wall image target metadata produced by @8thwall/image-target-cli.
+    // imagePath rewritten to absolute project path (CLI defaults to "image-targets/...").
+    const target0Data = {
+      imagePath: 'ar/8thwall/image-targets/target-0_luminance.jpg',
+      metadata: null,
+      name: 'target-0',
+      type: 'PLANAR',
+      properties: {
+        left: 0,
+        top: 114,
+        width: 1365,
+        height: 1820,
+        isRotated: false,
+        originalWidth: 1365,
+        originalHeight: 2048
+      },
+      resources: {
+        originalImage: 'target-0_original.jpg',
+        croppedImage: 'target-0_cropped.jpg',
+        thumbnailImage: 'target-0_thumbnail.jpg',
+        luminanceImage: 'target-0_luminance.jpg'
+      },
+      created: 0,
+      updated: 0
+    };
+
+    const onXrLoaded = () => {
+      XR8.XrController.configure({
+        imageTargetData: [target0Data],
+        disableWorldTracking: true
+      });
+    };
+    if (window.XR8) onXrLoaded(); else window.addEventListener('xrloaded', onXrLoaded);
+
+    // Wire image target events
+    const imgEntity = document.querySelector('xrextras-named-image-target');
+    imgEntity.addEventListener('xrimagefound', () => {
+      hint.classList.add('hidden');
+      video0.currentTime = 0;
+      video0.muted = !soundOn;
+      video0.play().catch(() => {
+        video0.muted = true;
+        video0.play().catch(() => {});
+      });
+    });
+    imgEntity.addEventListener('xrimagelost', () => {
+      video0.muted = true;
+      video0.currentTime = 0;
+      hint.classList.remove('hidden');
+    });
+
+    // Sound toggle
+    soundBtn.addEventListener('click', () => {
+      soundOn = !soundOn;
+      video0.muted = !soundOn;
+      iconOn.style.display  = soundOn ? 'block' : 'none';
+      iconOff.style.display = soundOn ? 'none'  : 'block';
+    });
+
+    // Start button — triggers camera permission prompt and unlocks iOS video
+    document.getElementById('start-btn').addEventListener('click', () => {
+      if (started) return;
+      started = true;
+      splash.classList.add('hidden');
+      loading.classList.add('visible');
+      // Force a muted play() during user gesture so iOS allows autoplay later
+      video0.play().catch(() => {});
+      video0.pause();
+      // Show sound button once camera is up
+      const onReady = () => {
+        loading.classList.remove('visible');
+        soundBtn.style.display = 'flex';
+      };
+      // 8th Wall fires 'realityready' when XR session is up
+      scene.addEventListener('realityready', onReady, { once: true });
+      // Fallback: clear loader after 10s
+      setTimeout(() => loading.classList.remove('visible'), 10000);
+    });
+
+    scene.addEventListener('camera-error', () => {
+      loading.classList.remove('visible');
+      errorBox.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
