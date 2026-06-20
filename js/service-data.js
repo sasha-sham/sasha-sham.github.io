@@ -234,11 +234,11 @@ const servicesData = [
         title: 'АРТ-ВСТРЕЧИ С ДЕТЬМИ',
         images: [
             {
-                src: 'images/services/kids-sessions-01.jpg',
+                src: 'images/services/kids-sessions-03.jpg',
                 alt: 'Арт-встречи с детми 1'
             },
             {
-                src: 'images/services/kids-sessions-03.jpg',
+                src: 'images/services/kids-sessions-04.jpg',
                 alt: 'Арт-встречи с детми 3'
             }
         ],
