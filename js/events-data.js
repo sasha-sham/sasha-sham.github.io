@@ -218,7 +218,7 @@ const eventsData = [
     {
         id: 'ev011',
         title: 'Детский мастер-класс "Роспись пряника" + интерактивная выставка (6+)',
-        date: '2025-08-10',
+        date: '2026-08-10',
         time: '12:00',
         category: 'children',
         featured: true,
