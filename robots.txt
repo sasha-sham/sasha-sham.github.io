@@ -8,8 +8,8 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
-Allow: /youtube.html
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -25,8 +25,8 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
-Allow: /youtube.html
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -41,8 +41,8 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
-Allow: /youtube.html
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -57,8 +57,8 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
-Allow: /youtube.html
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -86,8 +86,8 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
-Allow: /youtube.html
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
 Disallow: /js/
@@ -106,8 +106,8 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
-Allow: /youtube.html
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
 Disallow: /js/

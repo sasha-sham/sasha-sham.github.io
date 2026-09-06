@@ -1,4 +1,4 @@
-document.addEventListener('partialsLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.querySelector('.menu-toggle');
     const navButtons = document.querySelector('.nav-buttons');
     const navLinks = document.querySelectorAll('.nav-button');
