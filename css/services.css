@@ -5,6 +5,23 @@ main {
     background-color: #f4f4f4;
 }
 
+.faq-link {
+    max-width: 800px;
+    margin: 0 auto 2em;
+    padding: 0 1.5em;
+    text-align: center;
+}
+
+.faq-link a {
+    color: #FF69B4;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.faq-link a:hover {
+    text-decoration: underline;
+}
+
 .service-card {
     background: white;
     border-radius: 8px;

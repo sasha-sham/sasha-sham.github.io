@@ -233,7 +233,7 @@ footer {
 .nav-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
@@ -241,6 +241,13 @@ footer {
     transform: none;
     background: none;
     padding: 0;
+}
+
+@media (min-width: 769px) {
+    .nav-buttons .nav-button {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
 }
 
 /* About page styles */
