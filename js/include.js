@@ -13,6 +13,16 @@
         console.error(e);
       }
     }));
+    document.dispatchEvent(new CustomEvent('partialsLoaded'));
+    markActiveNavLink();
+  }
+
+  function markActiveNavLink() {
+    const current = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-button').forEach((link) => {
+      const href = link.getAttribute('href');
+      link.classList.toggle('active', href === current);
+    });
   }
 
   if (document.readyState === 'loading') {
