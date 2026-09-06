@@ -28,6 +28,20 @@
     margin-bottom: 3em;
 }
 
+.map-fallback-link {
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.map-fallback-link a {
+    color: #FF69B4;
+    text-decoration: none;
+}
+
+.map-fallback-link a:hover {
+    text-decoration: underline;
+}
+
 .contact-item {
     padding: 0.75em;
     text-align: center;

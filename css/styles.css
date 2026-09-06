@@ -648,3 +648,114 @@ footer {
         grid-template-columns: repeat(5, 1fr);
     }
 }
+
+/* 404 page */
+.notfound {
+    position: relative;
+    max-width: 600px;
+    margin: 3em auto;
+    padding: 3em 1.5em;
+    text-align: center;
+    overflow: hidden;
+}
+
+.notfound-splash {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+    filter: blur(2px);
+}
+
+.blob-1 {
+    width: 160px;
+    height: 160px;
+    background: #FFBF00;
+    top: -40px;
+    left: -30px;
+}
+
+.blob-2 {
+    width: 120px;
+    height: 120px;
+    background: #FF69B4;
+    bottom: -20px;
+    right: -20px;
+}
+
+.blob-3 {
+    width: 90px;
+    height: 90px;
+    background: #7EC8E3;
+    top: 40%;
+    right: 10%;
+}
+
+.notfound-emoji {
+    position: relative;
+    z-index: 1;
+    font-size: 3em;
+    margin: 0 0 0.2em;
+}
+
+.notfound-code {
+    position: relative;
+    z-index: 1;
+    font-size: 4em;
+    margin: 0 0 0.3em;
+    letter-spacing: 0.05em;
+}
+
+.notfound-code .digit {
+    display: inline-block;
+}
+
+.digit-1 { color: #FFBF00; transform: rotate(-8deg); }
+.digit-2 { color: #FF69B4; transform: rotate(6deg); }
+.digit-3 { color: #7EC8E3; transform: rotate(-4deg); }
+
+.notfound-title {
+    position: relative;
+    z-index: 1;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.notfound-text {
+    position: relative;
+    z-index: 1;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+.notfound-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 1.5em;
+}
+
+.notfound-contact {
+    position: relative;
+    z-index: 1;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.notfound-contact a {
+    color: #FF69B4;
+    text-decoration: none;
+}
+
+.notfound-contact a:hover {
+    text-decoration: underline;
+}
