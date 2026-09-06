@@ -68,16 +68,43 @@
     color:var(--muted);
     white-space:nowrap;
   }
+  .stepper{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .step-btn{
+    flex:0 0 auto;
+    width:44px;
+    height:44px;
+    padding:0;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:700;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:none;
+  }
   input[type=number]{
-    width:80px;
-    padding:10px 12px;
+    width:64px;
+    flex:0 0 64px;
+    padding:10px 0;
     border-radius:12px;
     border:1px solid rgba(255,255,255,0.15);
     background:rgba(255,255,255,0.06);
     color:var(--text);
-    font-size:16px;
+    font-size:20px;
+    font-weight:700;
     text-align:center;
     outline:none;
+    -moz-appearance:textfield;
+  }
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin:0;
   }
   input[type=number]:focus{
     border-color:var(--accent);
@@ -131,6 +158,14 @@
     box-shadow:0 10px 24px rgba(255,105,180,0.3);
     transition:transform .12s ease, box-shadow .12s ease, opacity .12s ease;
   }
+  #rollBtn{
+    font-size:19px;
+    font-weight:700;
+    padding:18px 48px;
+    width:100%;
+    border-radius:16px;
+    letter-spacing:.3px;
+  }
   button:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,105,180,0.4);}
   button:active{transform:translateY(0);}
   button:disabled{opacity:.5;cursor:not-allowed;transform:none;}
@@ -159,11 +194,14 @@
 <canvas id="confetti"></canvas>
 <div class="card">
   <h1>Честный розыгрыш</h1>
-  <p class="sub">Введи число участников (1–20) и получи случайный номер-победитель</p>
+  <p class="sub">Введи число участников (1–99) и получи случайный номер-победитель</p>
 
   <div class="row">
-    <label for="maxN">Участников:</label>
-    <input id="maxN" type="number" min="1" max="20" value="20" inputmode="numeric">
+    <div class="stepper">
+      <button type="button" class="step-btn" id="decBtn" aria-label="Меньше">−</button>
+      <input id="maxN" type="number" min="1" max="99" value="10" inputmode="numeric">
+      <button type="button" class="step-btn" id="incBtn" aria-label="Больше">+</button>
+    </div>
   </div>
   <div class="err" id="err"></div>
 
@@ -199,18 +237,38 @@
   const resultEl = document.getElementById("result");
   const rollBtn = document.getElementById("rollBtn");
   const errEl = document.getElementById("err");
+  const decBtn = document.getElementById("decBtn");
+  const incBtn = document.getElementById("incBtn");
+  const MIN = 1, MAX = 99;
 
   function validate(){
     const v = parseInt(maxInput.value, 10);
-    if(!Number.isInteger(v) || v < 1 || v > 20){
-      errEl.textContent = "Введите целое число от 1 до 20";
+    if(!Number.isInteger(v) || v < MIN || v > MAX){
+      errEl.textContent = "Введите целое число от " + MIN + " до " + MAX;
       return null;
     }
     errEl.textContent = "";
     return v;
   }
 
+  function currentOrDefault(){
+    const v = parseInt(maxInput.value, 10);
+    return Number.isInteger(v) ? v : MIN;
+  }
+
   maxInput.addEventListener("input", validate);
+
+  decBtn.addEventListener("click", function(){
+    const v = Math.max(MIN, currentOrDefault() - 1);
+    maxInput.value = v;
+    validate();
+  });
+
+  incBtn.addEventListener("click", function(){
+    const v = Math.min(MAX, currentOrDefault() + 1);
+    maxInput.value = v;
+    validate();
+  });
 
   rollBtn.addEventListener("click", function(){
     const max = validate();
