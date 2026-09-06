@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="event-card ${isPast ? 'past-event' : ''} ${event.featured ? 'featured' : ''}" data-category="${event.category}" data-date="${event.date}" data-id="${event.id}">
                 <div class="event-category">${categoryText}</div>
-                <img src="${event.image}" alt="${event.title}" class="event-image">
+                <img src="${event.image}" alt="${event.title}" class="event-image" loading="lazy">
                 <div class="event-content">
                     <h3>${event.title}</h3>
                     <div class="event-date">${displayDate}</div>

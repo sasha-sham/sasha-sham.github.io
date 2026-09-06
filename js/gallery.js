@@ -40,6 +40,7 @@ try {
             if (!imagePath) continue;
 
             img.src = imagePath;
+            img.loading = 'lazy';
             img.className = 'gallery-item';
             img.dataset.index = i - 1;
             img.dataset.fullIndex = i;

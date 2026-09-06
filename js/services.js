@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="service-content">
                 <div class="service-images">
                     ${service.images.map((img, index) => `
-                        <img src="${img.src}" alt="${img.alt}" class="preview-trigger" data-service="${service.title}" data-index="${index}">
+                        <img src="${img.src}" alt="${img.alt}" class="preview-trigger" data-service="${service.title}" data-index="${index}" loading="lazy">
                     `).join('')}
                 </div>
                 <div class="service-details">
