@@ -8,11 +8,12 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
+Allow: /faq.html
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
-Disallow: /js/
+Allow: /js/
 Disallow: /.git/
 
 # AI Bot specific directives
@@ -25,11 +26,12 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
+Allow: /faq.html
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
-Disallow: /js/
+Allow: /js/
 Disallow: /.git/
 
 User-agent: PerplexityBot
@@ -41,11 +43,12 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
+Allow: /faq.html
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
-Disallow: /js/
+Allow: /js/
 Disallow: /.git/
 
 User-agent: ClaudeBot
@@ -57,11 +60,12 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
+Allow: /faq.html
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
-Disallow: /js/
+Allow: /js/
 Disallow: /.git/
 
 # Sitemap
@@ -86,11 +90,12 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
+Allow: /faq.html
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
-Disallow: /js/
+Allow: /js/
 Disallow: /.git/
 Clean-param: yclid&ymclid
 
@@ -106,9 +111,10 @@ Allow: /gallery.html
 Allow: /feedback.html
 Allow: /contact.html
 Allow: /events.html
+Allow: /faq.html
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /images/
 Allow: /css/
-Disallow: /js/
+Allow: /js/
 Disallow: /.git/

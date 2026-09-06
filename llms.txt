@@ -13,6 +13,7 @@ Instagram: https://www.instagram.com/sasha_sham_dubinkina
 - [Мероприятия](https://www.art-sasha.site/events.html): расписание предстоящих мастер-классов и тематических встреч
 - [Отзывы](https://www.art-sasha.site/feedback.html): отзывы клиентов
 - [Мои работы](https://www.art-sasha.site/gallery.html): галерея картин и работ
+- [Частые вопросы](https://www.art-sasha.site/faq.html): ответы на частые вопросы о мастер-классах, ценах, возрасте и записи
 - [Контакты](https://www.art-sasha.site/contact.html): адрес, телефон, запись на мероприятия и консультации
 
 ## Услуги
